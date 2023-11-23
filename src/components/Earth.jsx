@@ -25,7 +25,7 @@ export default function earth() {
 
   return (
     <Canvas ref={scene}>
-      <ambientLight intensity={0.1} color={"#2dd4bf"} />
+      <ambientLight intensity={0.2} color={"#2dd4bf"} />
       <directionalLight
         intensity={3.5}
         position={[1, 0, -0.25]}

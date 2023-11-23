@@ -2,16 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.gradient-heading {
+  background: linear-gradient(to right, #2dd4bf, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#project_heading {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  scroll-snap-stop: always;
+}
+
 .pham {
   .main {
-    height: 60vw;
-    background-color: #0f0f0f;
+    // height: 60vw;
+    // background-color: #0f0f0f;
     // margin-top: 100vh;
     // margin-bottom: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    scroll-snap-stop: always;
     img {
       height: 100%;
     }
@@ -25,7 +39,7 @@ html {
   scroll-snap-type: y mandatory;
   //   overflow-y: scroll;
   scroll-behavior: smooth;
-  overflow-x: 0;
+  overflow-x: hidden;
   .snapped {
     scroll-snap-align: center;
     width: 100vw;
@@ -34,7 +48,7 @@ html {
 }
 
 .imp-800vh {
-  height: 1500vh !important;
+  height: 800vh !important;
   margin-top: 100px;
   margin-bottom: 100px;
   scroll-snap-type: none !important;

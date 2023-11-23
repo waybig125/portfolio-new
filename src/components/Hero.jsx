@@ -18,7 +18,7 @@ const Hero = () => {
 
   const rotate = useTransform(
     scrollYProgress,
-    [0, 0.25, 1],
+    [0, 0.1, 1],
     ["0deg", "0deg", "90deg"],
   );
 
@@ -35,7 +35,7 @@ const Hero = () => {
             <div className={`w-1 sm:h-80 h-40 violet-gradient`} />
           </div>
           <div>
-            <h1 className={`${styles.heroHeadText} text-white`}>
+            <h1 className={`${styles.heroHeadText} gradient-heading`}>
               We are <span className={`text-[#2dd4bf]`}>Axisia</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
@@ -47,7 +47,7 @@ const Hero = () => {
         {/* <About /> */}
         {/* <Experience /> */}
       </section>
-      {/* <section
+      <section
         className={`snapped imp-800vh`}
         id="animated"
         style={{ "scroll-snap-type": "none" }}
@@ -55,8 +55,14 @@ const Hero = () => {
         <div className="sticky top-0 h-screen">
           <Trippy rotate={rotate} />
         </div>
-      </section> */}
+      </section>
       <section className="pham inset-0 h-screen w-screen">
+        <h1
+          className="bg-bitems-center gradient-heading my-[20px] text-center snapped h-screen w-screen main"
+          id="project_heading"
+        >
+          <span className={``}>Our Projects</span>
+        </h1>
         <div className={`main h-screen w-screen snapped`}>
           <Earth />
           <Projects />
