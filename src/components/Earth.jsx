@@ -31,7 +31,7 @@ export default function earth() {
         position={[1, 0, -0.25]}
         color={"#2dd4bf"}
       />
-      <motion.mesh scale={2.5} rotation-y={smoothRotation}>
+      <motion.mesh scale={1.7} rotation-y={smoothRotation}>
         <sphereGeometry args={[1, 64, 64]} />
         <meshStandardMaterial map={color} normalMap={normal} aoMap={aoMap} />
       </motion.mesh>

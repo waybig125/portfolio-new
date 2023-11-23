@@ -12,6 +12,18 @@ import dynamic from "next/dynamic";
 
 const Hero = () => {
   const targetRef = useRef();
+  const headingRef = useRef();
+
+  const headingProgress = useScroll({
+    target: headingRef,
+  });
+
+  const rotation = useTransform(
+    headingProgress.scrollYProgress,
+    [0, 1],
+    ["180deg", "0deg"],
+  );
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
@@ -36,7 +48,7 @@ const Hero = () => {
           </div>
           <div>
             <h1 className={`${styles.heroHeadText} gradient-heading`}>
-              We are <span className={`text-[#2dd4bf]`}>Axisia</span>
+              We are <span className={`text-[#2dd4bf]`}>Axisio</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               A Team Of Expert Web Developers
@@ -58,12 +70,15 @@ const Hero = () => {
       </section>
       <section className="pham inset-0 h-screen w-screen">
         <h1
-          className="bg-bitems-center gradient-heading my-[20px] text-center snapped h-screen w-screen main"
+          className="items-center gradient-heading my-[20px] text-center snapped h-[100%] w-[100%] main"
           id="project_heading"
+          ref={headingRef}
         >
-          <span className={``}>Our Projects</span>
+          <motion.span className={``} style={{ rotation }}>
+            Our Projects
+          </motion.span>
         </h1>
-        <div className={`main h-screen w-screen snapped`}>
+        <div className={`main bg-black h-screen w-screen snapped`}>
           <Earth />
           <Projects />
         </div>

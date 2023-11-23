@@ -15,9 +15,15 @@
   scroll-snap-stop: always;
 }
 
+@media (max-width: 480px) {
+  #project_heading {
+    font-size: 28px;
+  }
+}
+
 .pham {
   .main {
-    // height: 60vw;
+    height: 60vwmax;
     // background-color: #0f0f0f;
     // margin-top: 100vh;
     // margin-bottom: 100vh;
@@ -32,18 +38,25 @@
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 html {
-  //   width: 100vw;
+  width: 100vw;
   //   height: 100vh;
   margin: 0;
+  padding: 0;
   scroll-snap-type: y mandatory;
   //   overflow-y: scroll;
   scroll-behavior: smooth;
   overflow-x: hidden;
   .snapped {
     scroll-snap-align: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
 }
 
