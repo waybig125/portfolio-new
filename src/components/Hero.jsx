@@ -89,7 +89,7 @@ const Hero = () => {
 
 const Earth = dynamic(() => import("@/components/Earth"), {
   ssr: false,
-  loading: () => <img src="/assets/placeholder.png" alt="placeholder" />,
+  loading: () => <h1 className="z-[2]">Loading .....</h1>,
 });
 
 const NUM_SECTIONS = 100;

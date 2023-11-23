@@ -1,9 +1,11 @@
 "use client";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import { useScroll, useSpring } from "framer-motion";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { motion } from "framer-motion-3d";
+import { OrbitControls, Preload } from "@react-three/drei";
+import CanvasLoader from "./Loader";
 
 export default function earth() {
   const scene = useRef(null);
@@ -31,20 +33,26 @@ export default function earth() {
         position={[1, 0, -0.25]}
         color={"#2dd4bf"}
       />
+      <Suspense fallback={<CanvasLoader />}>
       <MeshComp
         smoothRotation={smoothRotation}
         color={color}
         normal={normal}
         aoMap={aoMap}
       />
+      <Preload all />
+      </Suspense>
+      <OrbitControls
+        autoRotate
+        enableZoom={false}
+        enablePan={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+      />
     </Canvas>
   );
 }
 const MeshComp = ({ smoothRotation, color, normal, aoMap }) => {
-  useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
-  });
   const ref = useRef(null);
   return (
     <motion.mesh scale={1.7} rotation-y={smoothRotation}>
