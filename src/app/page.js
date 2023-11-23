@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <div className={`relative z-0 bg-primary`}>
         <div className="starsCanvas">
-          {/* <StarsCanvas /> */}
+          <StarsCanvas />
         </div>
         <div className={`bg-hero-pattern bg-cover bg-no-repeat bg-center`}>
           <Navbar />

@@ -12,7 +12,11 @@ const Hero = () => {
     target: targetRef,
   });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
+  const rotate = useTransform(
+    scrollYProgress,
+    [0, 0.25, 1],
+    ["0deg", "0deg", "90deg"],
+  );
 
   return (
     <>
@@ -52,14 +56,14 @@ const Hero = () => {
   );
 };
 
-const NUM_SECTIONS = 25;
+const NUM_SECTIONS = 100;
 const PADDING = `${100 / NUM_SECTIONS / 2}vmin`;
 
 const generateSections = ({ count, color, rotate }) => {
   if (count >= NUM_SECTIONS) {
     return <></>;
   }
-  const nextColor = color === "black" ? "white" : "black";
+  const nextColor = color === "black" ? "#2dd4bf" : "black";
   let newCount = count + 1;
   return (
     <SectionComp rotate={rotate} background={color}>
