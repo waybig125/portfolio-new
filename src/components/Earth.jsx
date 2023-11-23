@@ -1,5 +1,5 @@
 "use client";
-import { Canvas, useLoader } from "@react-three/fiber";
+import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { useScroll, useSpring } from "framer-motion";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
@@ -31,10 +31,20 @@ export default function earth() {
         position={[1, 0, -0.25]}
         color={"#2dd4bf"}
       />
-      <motion.mesh scale={1.7} rotation-y={smoothRotation}>
-        <sphereGeometry args={[1, 64, 64]} />
-        <meshStandardMaterial map={color} normalMap={normal} aoMap={aoMap} />
-      </motion.mesh>
+      <MeshComp />
     </Canvas>
   );
+}
+const MeshComp = () => {
+    useFrame((state, delta) => {
+        ref.current.rotation.x -= delta / 10;
+        ref.current.rotation.y -= delta / 15;
+    });
+    const ref = useRef(null);
+    return (
+        <motion.mesh scale={1.7} rotation-y={smoothRotation}>
+        <sphereGeometry args={[1, 64, 64]} ref={ref} />
+        <meshStandardMaterial map={color} normalMap={normal} aoMap={aoMap} />
+        </motion.mesh>
+    );
 }
