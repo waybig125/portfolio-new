@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   //   width: 100vw;
   //   height: 100vh;
   margin: 0;
@@ -10,10 +10,15 @@ body {
   //   overflow-y: scroll;
   scroll-behavior: smooth;
   .snapped {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     width: 100vw;
     height: 100vh;
   }
+}
+
+.imp-800vh {
+  height: 800vh !important;
+  scroll-snap-align: auto;
 }
 
 * {

@@ -10,10 +10,7 @@ import ServiceCard from "./ServiceCard";
 
 const About = () => {
   return (
-    <section className={``}>
-      <div className="snapped">test content1</div>
-      <div className="snapped">test content2</div>
-
+    <section className={`snapped`}>
       {/* <motion.div variants={() => textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Meet Me.</h2>
