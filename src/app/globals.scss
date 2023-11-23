@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 body {
-  //   width: 100vw;    
+  //   width: 100vw;
   //   height: 100vh;
   margin: 0;
   scroll-snap-type: y mandatory;
   //   overflow-y: scroll;
+  scroll-behavior: smooth;
   .snapped {
     scroll-snap-align: start;
     width: 100vw;
