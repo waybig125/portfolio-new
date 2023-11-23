@@ -39,7 +39,11 @@ const Hero = () => {
         {/* <About /> */}
         {/* <Experience /> */}
       </section>
-      <section className={`snapped imp-800vh`}>
+      <section
+        className={`snapped imp-800vh`}
+        id="animated"
+        style={{ "scroll-snap-type": "none" }}
+      >
         <div className="sticky top-0 h-screen">
           <Trippy rotate={rotate} />
         </div>
@@ -48,14 +52,26 @@ const Hero = () => {
   );
 };
 
+const NUM_SECTIONS = 25;
+const PADDING = `${100 / NUM_SECTIONS / 2}vmin`;
+
+const generateSections = ({ count, color, rotate }) => {
+  if (count >= NUM_SECTIONS) {
+    return <></>;
+  }
+  const nextColor = color === "black" ? "white" : "black";
+  let newCount = count + 1;
+  return (
+    <SectionComp rotate={rotate} background={color}>
+      {generateSections({ count: newCount, color: nextColor, rotate: rotate })}
+    </SectionComp>
+  );
+};
+
 const Trippy = ({ rotate }) => {
   return (
     <div className="absolute inset-0 overflow-hidden bg-black">
-      <SectionComp rotate={rotate} background={`white`}>
-        <SectionComp rotate={rotate} background={`black`}>
-          <SectionComp rotate={rotate} background={`white`}></SectionComp>
-        </SectionComp>
-      </SectionComp>
+      {generateSections({ count: 0, color: "black", rotate: rotate })}
     </div>
   );
 };
@@ -67,7 +83,7 @@ const SectionComp = ({ children, background, rotate }) => {
       style={{
         background,
         rotate,
-        padding: "5vw",
+        padding: PADDING,
       }}
     >
       {children}
