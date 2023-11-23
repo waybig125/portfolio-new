@@ -10,8 +10,11 @@ import ServiceCard from "./ServiceCard";
 
 const About = () => {
   return (
-    <>
-      <motion.div variants={() => textVariant()}>
+    <section className={``}>
+      <div className="snapped">test content1</div>
+      <div className="snapped">test content2</div>
+
+      {/* <motion.div variants={() => textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Meet Me.</h2>
       </motion.div>
@@ -28,8 +31,8 @@ const About = () => {
         {services.map((service, index) => (
         <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
-    </>
+      </div> */}
+    </section>
   );
 };
 

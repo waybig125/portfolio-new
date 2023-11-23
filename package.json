@@ -20,7 +20,7 @@
     "react-dom": "^18",
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
-    "sass": "^1.69.4",
+    "sass": "^1.69.5",
     "three": "^0.157.0",
     "typeit-react": "^2.6.4"
   },
