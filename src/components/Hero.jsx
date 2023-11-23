@@ -1,10 +1,14 @@
 "use client";
+import { Canvas, useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { styles } from "../app/styles";
+import Projects from "@/components/projects";
 // import { ComputersCanvas } from "./canvas";
 // import TypeIt from "typeit-react";
 import { About, Experience } from ".";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 
 const Hero = () => {
   const targetRef = useRef();
@@ -32,10 +36,10 @@ const Hero = () => {
           </div>
           <div>
             <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I am <span className={`text-[#2dd4bf]`}>M.Areeb</span>
+              We are <span className={`text-[#2dd4bf]`}>Axisia</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              A Web Developer
+              A Team Of Expert Web Developers
             </p>
           </div>
         </div>
@@ -43,7 +47,7 @@ const Hero = () => {
         {/* <About /> */}
         {/* <Experience /> */}
       </section>
-      <section
+      {/* <section
         className={`snapped imp-800vh`}
         id="animated"
         style={{ "scroll-snap-type": "none" }}
@@ -51,10 +55,21 @@ const Hero = () => {
         <div className="sticky top-0 h-screen">
           <Trippy rotate={rotate} />
         </div>
+      </section> */}
+      <section className="pham inset-0 h-screen w-screen">
+        <div className={`main h-screen w-screen snapped`}>
+          <Earth />
+          <Projects />
+        </div>
       </section>
     </>
   );
 };
+
+const Earth = dynamic(() => import("@/components/Earth"), {
+  ssr: false,
+  loading: () => <img src="/assets/placeholder.png" alt="placeholder" />,
+});
 
 const NUM_SECTIONS = 100;
 const PADDING = `${100 / NUM_SECTIONS / 2}vmin`;
