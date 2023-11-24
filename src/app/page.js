@@ -6,9 +6,9 @@ export default function Home() {
     <>
       {/* <SmoothScroll> */}
       <div className={`relative z-0 bg-primary`}>
-        <div className="starsCanvas">
+        {/* <div className="starsCanvas">
           <StarsCanvas />
-        </div>
+        </div> */}
         <div className={`bg-hero-pattern bg-cover bg-no-repeat bg-center`}>
           <Navbar />
           <Hero />

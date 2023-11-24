@@ -2,10 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  color: black;
+  background-color: #2dd4bf;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: black;
+}
 .gradient-heading {
   background: linear-gradient(to right, #2dd4bf, white);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradient-heading 5s infinite linear alternate-reverse;
+  text-shadow: 10px 30px 90px #2dd4bf;
+}
+
+@keyframes gradient-heading {
+  from {
+    background: linear-gradient(to right, #2dd4bf, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 30px 90px #2dd4bf;
+  }
+  to {
+    background: linear-gradient(to left, #2dd4bf, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 30px 90px black;
+  }
 }
 
 #project_heading {

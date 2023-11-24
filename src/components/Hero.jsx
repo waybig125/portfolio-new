@@ -1,7 +1,14 @@
 "use client";
+import { useEffect } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-import { motion, useTransform, useScroll } from "framer-motion";
+import {
+  motion,
+  useTransform,
+  useScroll,
+  useInView,
+  useAnimation,
+} from "framer-motion";
 import { styles } from "../app/styles";
 import Projects from "@/components/projects";
 // import { ComputersCanvas } from "./canvas";
@@ -12,17 +19,18 @@ import dynamic from "next/dynamic";
 
 const Hero = () => {
   const targetRef = useRef();
-  const headingRef = useRef();
+  const headingRef = useRef(null);
 
-  const headingProgress = useScroll({
-    target: headingRef,
-  });
+  const isInView = useInView(headingRef);
+  const mainControls = useAnimation();
 
-  const rotation = useTransform(
-    headingProgress.scrollYProgress,
-    [0, 1],
-    ["180deg", "0deg"],
-  );
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView, mainControls]);
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -30,7 +38,7 @@ const Hero = () => {
 
   const rotate = useTransform(
     scrollYProgress,
-    [0, 0.1, 1],
+    [0, 0.05, 1],
     ["0deg", "0deg", "90deg"],
   );
 
@@ -62,19 +70,45 @@ const Hero = () => {
       <section
         className={`snapped imp-800vh`}
         id="animated"
-        style={{ "scroll-snap-type": "none" }}
+        style={{ scrollSnapType: "none" }}
       >
         <div className="sticky top-0 h-screen">
-          <Trippy rotate={rotate} />
+          {/* <Trippy rotate={rotate} /> */}
         </div>
       </section>
       <section className="pham inset-0 h-screen w-screen">
         <h1
           className="items-center gradient-heading my-[20px] text-center snapped h-[100%] w-[100%] main"
           id="project_heading"
-          ref={headingRef}
         >
-          <motion.span className={``} style={{ rotation }}>
+          <motion.span
+            ref={headingRef}
+            className={``}
+            variants={{
+              visible: {
+                opacity: 1,
+                x: 0,
+                // y: 0,
+                // letterSpacing: 0,
+                scale: 1,
+                transition: {
+                  duration: 1,
+                  // delay: 0.3,
+                },
+              },
+              hidden: {
+                x: -510,
+                opacity: 1,
+                scale: 2,
+                // letterSpacing: 20,
+                // y: 25,
+              },
+            }}
+            // initial={mainControls}
+            initial="hidden"
+            animate={mainControls}
+            transition="transition"
+          >
             Our Projects
           </motion.span>
         </h1>
