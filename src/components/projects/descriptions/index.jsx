@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import useMousePosition from "@/utils/useMousePosition";
 
-export default function index({ data, selectedProject }) {
+export default function Descriptions({ data, selectedProject }) {
   const crop = (string, maxLength) => {
     return string.substring(0, maxLength);
   };
