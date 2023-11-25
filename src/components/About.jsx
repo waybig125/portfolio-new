@@ -8,16 +8,35 @@
 // import ServiceCard from "./ServiceCard";
 
 import styles from "./about.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import useMousePosition from "./utils/useMousePosition";
+import useMousePosition from "../utils/useMousePosition";
 
 const About = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const isMobileDevice =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        window.navigator.userAgent,
+      );
+
+    if (isMobileDevice) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
+
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
   const size = isHovered ? 400 : 40;
   return (
-    <section className={`snapped`}>
+    <section
+      className={`h-[100vh] relative snapped z-[3]`}
+      style={{
+        scrollSnapStop: "always",
+      }}
+    >
       {/* <motion.div variants={() => textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Meet Me.</h2>
@@ -37,32 +56,48 @@ const About = () => {
         ))}
       </div> */}
 
-      <main className={styles.main}>
+      <main className={`${styles.main} h-[100%] pham-text`}>
         <motion.div
-          className={styles.mask}
-          animate={{
-            WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
-            WebkitMaskSize: `${size}px`,
-          }}
+          className={`h-[100%] ${styles.mask}`}
+          animate={
+            !isMobile && {
+              WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
+              WebkitMaskSize: `${size}px`,
+            }
+          }
           transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
         >
           <p
             onMouseEnter={() => {
-              setIsHovered(true);
+              if (!isMobile) {
+                setIsHovered(true);
+              }
             }}
             onMouseLeave={() => {
-              setIsHovered(false);
+              if (!isMobile) {
+                setIsHovered(false);
+              }
             }}
           >
-            A visual designer - with skills that haven't been replaced by A.I
-            (yet) - making good shit only if the paycheck is equally good.
+            We are a team — struggling with disjointed efforts, our web
+            developers often face technical hurdles, while our social media
+            marketers grapple with engagement issues. Our SEO experts'
+            strategies often fall short, leading to diminished online
+            visibility. Despite efforts, innovation remains stagnant, hindering
+            our ability to redefine digital success.
           </p>
         </motion.div>
 
-        <div className={styles.body}>
+        <div className={`h-[100%] pham-mask ${styles.body}`}>
           <p>
-            I'm a <span>selectively skilled</span> product designer with strong
-            focus on producing high quality & impactful digital experience.
+            We are a stellar team — a synergy of{" "}
+            <span>web development virtuosos</span>,{" "}
+            <span>social media mavens</span>, and <span>SEO wizards</span>. With
+            our expertise and dedication, we breathe life into digital
+            aspirations, weaving captivating online journeys. Our passion for{" "}
+            <span>innovation</span> and relentless pursuit of excellence form
+            the cornerstone of our success, delivering tailored solutions that
+            redefine the <span>digital landscape</span>.
           </p>
         </div>
       </main>
@@ -70,4 +105,5 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "about");
+// export default SectionWrapper(About, "about");
+export default About;

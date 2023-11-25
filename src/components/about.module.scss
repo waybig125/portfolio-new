@@ -1,21 +1,21 @@
 .main {
   height: 100vh;
-
   .mask,
   .body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #afa18f;
-    font-size: 64px;
-    line-height: 66px;
+    // font-size: 34px;
+    // line-height: 36px;
     cursor: default;
-
     p {
-      width: 1000px;
+      // width: 1000px;
       padding: 40px;
+      // max-width: fit-content;
+      width: 100%;
     }
     span {
       color: #2dd4bf;
@@ -29,5 +29,6 @@
     background: #2dd4bf;
     position: absolute;
     color: black;
+    // color: white;
   }
 }

@@ -36,7 +36,7 @@ function Title({ data, setSelectedProject }) {
   const clip = useMotionTemplate`inset(0 ${clipProgress}% 0 0)`;
 
   return (
-    <div ref={container} className={styles.title}>
+    <div ref={container} className={`z-[3] ${styles.title}`}>
       <div
         className={styles.wrapper}
         onMouseOver={() => {
@@ -47,7 +47,7 @@ function Title({ data, setSelectedProject }) {
         }}
       >
         <motion.p style={{ clipPath: clip }}>{title}</motion.p>
-        <p>{title}</p>
+        <p className="z-[3]">{title}</p>
       </div>
     </div>
   );

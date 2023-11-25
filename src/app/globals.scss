@@ -2,6 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+.select-none {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.customBox {
+  top: 30px;
+  position: fixed;
+  width: 30vw;
+  // z-index: 6 !important;
+  box-shadow: 0px 0px 10px #2dd4bf;
+  font-size: 12px;
+  padding: 15px;
+  height: 10vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.customImgBox {
+  bottom: 30px;
+  position: fixed;
+  width: 30vw;
+  // z-index: 6 !important;
+  box-shadow: 0px 0px 10px #2dd4bf;
+  height: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.customImgBoxImg {
+  width: 100%;
+}
+
 ::selection {
   color: black;
   background-color: #2dd4bf;
@@ -39,21 +80,33 @@
   font-size: 48px;
   text-transform: uppercase;
   font-weight: bolder;
-  scroll-snap-stop: always;
+  scroll-snap-stop: always !important;
 }
 
 @media (max-width: 480px) {
+  .customBox {
+    width: 94%;
+    font-size: 12px !important;
+    left: 3%;
+    top: 10px;
+    box-shadow: 0px 0px 10px #2dd4bf;
+    height: 10vh;
+  }
   #project_heading {
     font-size: 28px;
+  }
+  #cursor-mouse {
+    display: none;
   }
 }
 
 .pham {
+  height: 100vh;
   .main {
-    height: 60vwmax;
+    // height: 60vwmax;
     // background-color: #0f0f0f;
-    // margin-top: 100vh;
-    // margin-bottom: 100vh;
+    margin-top: 100vh;
+    margin-bottom: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -69,6 +122,29 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.pham-mask,
+.pham-text {
+  font-size: 34px;
+  line-height: 36px;
+}
+
+@media (max-width: 480px) {
+  .pham-mask {
+    font-size: 20px !important;
+    line-height: 22px !important;
+    mask: none !important;
+    pointer-events: none;
+    mask-size: 0 !important;
+  }
+  .pham-text {
+    font-size: 20px !important;
+    line-height: 22px !important;
+  }
+  .imp-800vh {
+    height: 800vw;
+  }
 }
 
 html {
