@@ -81,7 +81,7 @@ const About = () => {
           >
             We are a team — struggling with disjointed efforts, our web
             developers often face technical hurdles, while our social media
-            marketers grapple with engagement issues. Our SEO experts'
+            marketers grapple with engagement issues. Our SEO experts&apos;
             strategies often fall short, leading to diminished online
             visibility. Despite efforts, innovation remains stagnant, hindering
             our ability to redefine digital success.

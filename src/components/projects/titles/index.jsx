@@ -7,7 +7,7 @@ import {
   useMotionTemplate,
 } from "framer-motion";
 
-export default function index({ data, setSelectedProject }) {
+export default function Titles({ data, setSelectedProject }) {
   return (
     <div className={styles.titles}>
       {data.map((project, i) => {

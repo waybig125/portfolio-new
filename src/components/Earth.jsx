@@ -8,7 +8,7 @@ import { OrbitControls, Preload } from "@react-three/drei";
 import CanvasLoader from "./Loader";
 import useMousePosition from "@/utils/useMousePosition";
 
-export default function earth() {
+export default function Earth() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const isMobileDevice =
@@ -31,8 +31,6 @@ export default function earth() {
     target: scene,
     offset: ["start end", "end start"],
   });
-
-  /* Used for smooth rotation if you're not using Lenis Scroll */
   const smoothRotation = useSpring(scrollYProgress, {
     damping: 20,
   });
