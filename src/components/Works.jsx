@@ -15,6 +15,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import ParticleRing from "./Particles";
 // import Earth from "./canvas/Earth";
 
 const Works = () => {
@@ -45,8 +46,9 @@ const Works = () => {
           className={`items-center main bg-black h-[100vh] w-screen`}
           style={{ scrollSnapAlign: "center !important" }}
         >
-          <Earth />
+          {/* <Earth /> */}
           <Projects />
+          {/* <ParticleRing /> */}
         </div>
       </section>
     </>
@@ -55,7 +57,7 @@ const Works = () => {
 
 const Earth = dynamic(() => import("@/components/Earth"), {
   ssr: false,
-  loading: () => <h1 className="z-[2]">Loading .....</h1>,
+  loading: () => <></>,
 });
 
 export default Works;

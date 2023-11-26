@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import useMousePosition from "@/utils/useMousePosition";
+import { Canvas } from "@react-three/fiber";
+import { useGLTF, Environment } from "@react-three/drei";
 
 export default function Descriptions({ data, selectedProject }) {
   const crop = (string, maxLength) => {
@@ -82,6 +84,7 @@ export default function Descriptions({ data, selectedProject }) {
           </div>
         );
       })}
+      {/*  */}
     </div>
   );
 }

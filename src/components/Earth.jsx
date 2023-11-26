@@ -25,7 +25,6 @@ export default function Earth() {
 
   const { x, y } = useMousePosition();
   const colorCode = y * 0.01;
-  console.log(colorCode);
   const scene = useRef(null);
   const { scrollYProgress } = useScroll({
     target: scene,

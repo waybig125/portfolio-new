@@ -49,7 +49,7 @@ const Hero = () => {
           <div className="z-[3]">
             <motion.h1
               className={`${styles.heroHeadText} gradient-heading`}
-              variant={() => textVariant(1)}
+              variants={() => textVariant(1)}
               initial="hidden"
               animate="show"
               transition="transition"
