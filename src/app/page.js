@@ -1,8 +1,16 @@
-import { About, Hero, Navbar, StarsCanvas, Works } from "@/components";
-import LaptopModelCanvas from "@/components/Laptop";
+import {
+  // About, Hero,
+  Navbar,
+  StarsCanvas,
+  Works,
+} from "@/components";
+// import LaptopModelCanvas from "@/components/Laptop";
 // import LaptopModelCanvas from "../components/Laptop";
 // import SmoothScroll from "@/components/smoothScroll";
-import Image from "next/image";
+// import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
+// import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
+
+// import Image from "next/image";
 
 // if (process.env.NODE_ENV != "production") {
 //   var axe = require("react-axe");
@@ -14,17 +22,14 @@ export default function Home() {
     <>
       {/* <SmoothScroll> */}
       <div className={`relative z-0 bg-black`}>
-        <div className="fixed z-[999] bg-white h-[100vh] w-[100%]">
-          <LaptopModelCanvas />
-        </div>
         {/* <div className="starsCanvas">
           <StarsCanvas />
         </div> */}
         <div className={``}>
           <Navbar />
-          {/* <Hero />
-          <About />
-          <Works /> */}
+          {/* <Hero /> */}
+          {/* <About /> */}
+          <Works />
         </div>
       </div>
       {/* </SmoothScroll> */}

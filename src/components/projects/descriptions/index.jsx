@@ -3,6 +3,8 @@ import styles from "./style.module.scss";
 import useMousePosition from "@/utils/useMousePosition";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, Environment } from "@react-three/drei";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import library from "@/utils/fontawesome";
 
 export default function Descriptions({ data, selectedProject }) {
   const crop = (string, maxLength) => {
@@ -33,7 +35,7 @@ export default function Descriptions({ data, selectedProject }) {
   return (
     <div className={styles.descriptions}>
       {data.map((project, i) => {
-        const { title, description, screenshot } = project;
+        const { title, description, screenshot, about, website } = project;
         const visibleCriteria = {
           display: selectedProject == i ? "flex" : "none",
         };
@@ -45,45 +47,91 @@ export default function Descriptions({ data, selectedProject }) {
           : { right: 0 };
 
         return (
-          <div key={i + "!"}>
-            <div
-              key={i}
-              className={styles.description}
-              style={{
-                clipPath:
-                  selectedProject == i ? "inset(0 0 0)" : "inset(50% 0 50%",
-              }}
-            >
-              <p>{crop(title, 9)}</p>
-              {/* <p>{description}</p> */}
-            </div>
-            <p
-              key={i + "1"}
-              style={{
-                ...visibleCriteria,
-                ...deviceCriteria,
-              }}
-              className="z-[3] customBox rounded-xl bg-[#000] mx-[10px]"
-            >
-              {description}
-            </p>
-            <p
-              key={i + "2"}
-              style={{
-                ...visibleCriteria,
-                ...deviceCriteria2,
-              }}
-              className="z-[3] customImgBox rounded-xl bg-[#000] mx-[10px]"
-            >
-              <img
-                src={screenshot}
-                alt={title}
-                className={"customImgBoxImg rounded-xl"}
-              />
-            </p>
-          </div>
+          // <div key={i + "!"}>
+          //   <div
+          //     key={i}
+          //     className={styles.description}
+          //     style={{
+          //       clipPath:
+          //         selectedProject == i ? "inset(0 0 0)" : "inset(50% 0 50%",
+          //     }}
+          //   >
+          //     <p>{crop(title, 9)}</p>
+          //     {/* <p>{description}</p> */}
+          //   </div>
+          //   <p
+          //     key={i + "1"}
+          //     style={{
+          //       ...visibleCriteria,
+          //       ...deviceCriteria,
+          //     }}
+          //     className="z-[3] customBox rounded-xl bg-[#000] mx-[10px]"
+          //   >
+          //     {description}
+          //   </p>
+          //   <p
+          //     key={i + "2"}
+          //     style={{
+          //       ...visibleCriteria,
+          //       ...deviceCriteria2,
+          //     }}
+          //     className="z-[3] customImgBox rounded-xl bg-[#000] mx-[10px]"
+          //   >
+          //     <img
+          //       src={screenshot}
+          //       alt={title}
+          //       className={"customImgBoxImg rounded-xl"}
+          //     />
+          //   </p>
+
+          //   <div className="fixed text-white z-[999] bg-black h-[100vh] w-[100%] text-center items-center flex">
+          //     <div
+          //       className="items-center text-center"
+          //       style={{ alignItems: "center", display: "none" }}
+          //     >
+          //       <div
+          //         className={
+          //           "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] left-[5px]"
+          //         }
+          //       >
+          //         <div className="h-[20px] p-[5px] z-[10000] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] left-[10px]">
+          //           <FontAwesomeIcon icon="xmark" />
+          //         </div>
+          //       </div>
+          //       <div
+          //         className={
+          //           "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] right-[5px]"
+          //         }
+          //       >
+          //         <div className="h-[20px] p-[5px] z-[10000] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] right-[10px]">
+          //           <FontAwesomeIcon icon="arrow-down" />
+          //         </div>
+          //       </div>
+          //       {/* <iframe src={website} frameBorder="0" className="frame"></iframe> */}
+          //     </div>
+          //     <div className="fixed text-white z-[999] bg-black h-[100vh] w-[100%]">
+          //       <h1 className="text-[#2dd4bf] text-4xl about-heading-mobile uppercase mt-[100px] mb-[-40px]">
+          //         Project Details
+          //       </h1>
+          //       <p className="mt-[100px] text-md text-white rounded-xl paragraph-about">
+          //         {about}
+          //       </p>
+          //       <div
+          //         className={
+          //           "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] left-[5px]"
+          //         }
+          //       >
+          //         <div className="h-[20px] p-[5px] z-[10000] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] left-[10px]">
+          //           <FontAwesomeIcon icon="xmark" />
+          //         </div>
+          //       </div>
+          //     </div>
+          //   </div>
+          // </div>
+          <></>
         );
       })}
+      {/*  */}
       {/*  */}
     </div>
   );

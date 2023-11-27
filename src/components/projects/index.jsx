@@ -10,12 +10,16 @@ const data = [
     description: `We developed the website for Business Wise Pro Documents Clearing Services L.L.C inc.`,
     speed: 0.5,
     screenshot: "../../screenshots/bw.png",
+    about: "",
+    website: "",
   },
   {
     title: "Sereniti",
     description: `We developed the website & logo for Sereniti E-Shop`,
     speed: 0.6,
     screenshot: "../../screenshots/sereniti.png",
+    about: "",
+    website: "",
   },
 ];
 

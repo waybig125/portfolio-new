@@ -46,7 +46,7 @@ const Works = () => {
           className={`items-center main bg-black h-[100vh] w-screen`}
           style={{ scrollSnapAlign: "center !important" }}
         >
-          {/* <Earth /> */}
+          <Earth />
           <Projects />
           {/* <ParticleRing /> */}
         </div>
