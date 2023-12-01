@@ -4,9 +4,9 @@ import { OrbitControls, Sphere, Box } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "@/utils/utils";
 import useMousePosition from "@/utils/useMousePosition";
 
-const ParticleRing = () => {
+const ParticleRing = ({ colorFromUser }) => {
   return (
-    <div className="absolute bg-transparent w-[100%] h-[100vh] z-[1]">
+    <div className="absolute bg-transparent w-[100%] h-[100vh]">
       <Canvas
         camera={{
           position: [0, 0, 20],
@@ -15,8 +15,12 @@ const ParticleRing = () => {
         className="bg-transparent"
       >
         {/* <OrbitControls maxDistance={20} minDistance={10} /> */}
-        <directionalLight />
-        <pointLight position={[-30, 0, -30]} power={10.0} />
+        <directionalLight color={colorFromUser} />
+        <pointLight
+          color={colorFromUser}
+          position={[-30, 0, -30]}
+          power={10.0}
+        />
         <PointCircle />
       </Canvas>
     </div>
@@ -39,7 +43,7 @@ const PointCircle = () => {
   //   });
 
   return (
-    <group ref={ref}>
+    <group ref={ref} rotation-y={y * 0.1} rotation-x={x * 0.01}>
       {pointsInner.map((point) => (
         <Point key={point.idx} position={point.position} color={point.color} />
       ))}

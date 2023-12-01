@@ -16,7 +16,6 @@ import {
   useSpring,
 } from "framer-motion";
 import ParticleRing from "./Particles";
-// import Earth from "./canvas/Earth";
 
 const Works = () => {
   const { x, y } = useMousePosition();
@@ -48,7 +47,7 @@ const Works = () => {
         >
           <Earth />
           <Projects />
-          {/* <ParticleRing /> */}
+          {/* <ParticleRing colorFromUser="white" /> */}
         </div>
       </section>
     </>

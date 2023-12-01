@@ -7,7 +7,11 @@ import {
   useMotionTemplate,
 } from "framer-motion";
 
-export default function Titles({ data, setSelectedProject }) {
+export default function Titles({
+  data,
+  setSelectedProject,
+  setClickedProject,
+}) {
   return (
     <div className={styles.titles}>
       {data.map((project, i) => {
@@ -16,6 +20,7 @@ export default function Titles({ data, setSelectedProject }) {
             key={i}
             data={{ ...project, i }}
             setSelectedProject={setSelectedProject}
+            setClickedProject={setClickedProject}
           />
         );
       })}
@@ -23,7 +28,7 @@ export default function Titles({ data, setSelectedProject }) {
   );
 }
 
-function Title({ data, setSelectedProject }) {
+function Title({ data, setSelectedProject, setClickedProject }) {
   const { title, speed, i } = data;
   const container = useRef(null);
 
@@ -39,6 +44,7 @@ function Title({ data, setSelectedProject }) {
     <div ref={container} className={`z-[3] ${styles.title}`}>
       <div
         className={styles.wrapper}
+        onClick={() => setClickedProject(i)}
         onMouseOver={() => {
           setSelectedProject(i);
         }}
