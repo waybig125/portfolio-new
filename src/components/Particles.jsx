@@ -43,7 +43,7 @@ const PointCircle = () => {
   //   });
 
   return (
-    <group ref={ref} rotation-y={y * 0.1} rotation-x={x * 0.01}>
+    <group ref={ref} rotation-y={y * 0.01} rotation-x={x * 0.01}>
       {pointsInner.map((point) => (
         <Point key={point.idx} position={point.position} color={point.color} />
       ))}
