@@ -3,10 +3,11 @@ import {
   faArrowDown,
   faXmark,
   faAnchor,
+  faUser
 } from "@fortawesome/free-solid-svg-icons";
 
 // Add the desired FontAwesome icons to the library
-library.add(faArrowDown, faXmark, faAnchor);
+library.add(faArrowDown, faXmark, faAnchor, faUser);
 
 // Configure FontAwesome to use specific settings if needed
 config.autoAddCss = false;

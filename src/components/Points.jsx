@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Box } from "@react-three/drei";
+import { OrbitControls, Sphere } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "@/utils/utils";
 import useMousePosition from "@/utils/useMousePosition";
 
-const ParticleRing = ({ colorFromUser }) => {
+const PointsRing = ({ colorFromUser }) => {
   return (
     <div className="absolute bg-transparent w-[100%] h-[100vh]">
       <Canvas
@@ -56,15 +56,15 @@ const PointCircle = () => {
 
 const Point = ({ position, color }) => {
   return (
-    <Box position={position} args={[1, 1, 1]}>
+    <Sphere position={position} args={[1, 64, 64]}>
       <meshStandardMaterial
         emissive={color}
         emissiveIntensity={0.5}
-        roughness={0.5}
+        roughness={0}
         color={color}
       />
-    </Box>
+    </Sphere>
   );
 };
 
-export default ParticleRing;
+export default PointsRing;

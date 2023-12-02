@@ -47,7 +47,7 @@ const Works = () => {
         >
           <Earth />
           <Projects />
-          {/* <ParticleRing colorFromUser="white" /> */}
+          <ParticleRing colorFromUser="white" />
         </div>
       </section>
     </>

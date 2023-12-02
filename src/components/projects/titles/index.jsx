@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+"use client";
+import React, { useRef, useState } from "react";
 import styles from "./style.module.scss";
 import {
   useScroll,
@@ -30,6 +31,7 @@ export default function Titles({
 
 function Title({ data, setSelectedProject, setClickedProject }) {
   const { title, speed, i } = data;
+  const [readMoreText, setReadMoreText] = useState(false);
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -47,13 +49,17 @@ function Title({ data, setSelectedProject, setClickedProject }) {
         onClick={() => setClickedProject(i)}
         onMouseOver={() => {
           setSelectedProject(i);
+          setReadMoreText(true);
         }}
         onMouseLeave={() => {
           setSelectedProject(null);
+          setReadMoreText(false);
         }}
       >
-        <motion.p style={{ clipPath: clip }}>{title}</motion.p>
-        <p className="z-[3]">{title}</p>
+        <motion.p style={{ clipPath: clip }}>
+          {!readMoreText ? title : "read more"}
+        </motion.p>
+        <p className="z-[3]">{!readMoreText ? title : "read more"}</p>
       </div>
     </div>
   );
