@@ -4,6 +4,7 @@ import {
   StarsCanvas,
   Testimonials,
   // Works,
+  Contact,
 } from "@/components";
 import Team from "@/components/Team";
 // import LaptopModelCanvas from "@/components/Laptop";
@@ -17,14 +18,15 @@ export default function Home() {
     <>
       {/* <SmoothScroll> */}
       <div className={`relative z-0 bg-black`}>
-        {/* <div className="starsCanvas">
+        <div className="starsCanvas">
           <StarsCanvas />
-        </div> */}
+        </div>
         <div className={``}>
           <Navbar />
           {/* <Hero /> */}
           {/* <About /> */}
-          <Team />
+          {/* <Team /> */}
+          <Contact />
           {/* <Works /> */}
           {/* <Testimonials /> */}
         </div>
