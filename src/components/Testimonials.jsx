@@ -17,8 +17,8 @@ const Testimonials = () => {
           <motion.span>SEE WHAT OTHERS SAY?</motion.span>
         </h1>
         {/* </div> */}
-        <Testimonial color="yellow" />
-        <Testimonial color="red" />
+        <Testimonial color="white" />
+        <Testimonial color="black" />
       </div>
     </div>
   );
@@ -45,7 +45,7 @@ const Testimonial = ({ color }) => {
         style={{ scrollSnapType: "none" }}
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
-          <div className="h-[100vh] flex-none items-center w-[100%] text-center z-[1]">
+          <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
             {/* <PointsRing colorFromUser={color} /> */}
             <div className="w-[50%] h-[50%] testimonial flex text-center items-center bg-black rounded-xl absolute left-[25%] top-[25%]">
               <div className="w-[20%]">

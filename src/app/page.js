@@ -3,8 +3,9 @@ import {
   Navbar,
   StarsCanvas,
   Testimonials,
-  Works,
+  // Works,
 } from "@/components";
+import Team from "@/components/Team";
 // import LaptopModelCanvas from "@/components/Laptop";
 // import LaptopModelCanvas from "../components/Laptop";
 // import SmoothScroll from "@/components/smoothScroll";
@@ -23,7 +24,8 @@ export default function Home() {
           <Navbar />
           {/* <Hero /> */}
           {/* <About /> */}
-          <Works />
+          <Team />
+          {/* <Works /> */}
           {/* <Testimonials /> */}
         </div>
       </div>

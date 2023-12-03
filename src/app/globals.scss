@@ -12,6 +12,123 @@
   border: 1px solid white;
 }
 
+.team-member-yellow {
+  border: 1px solid yellow;
+  box-shadow: 0px 0px 90px yellow;
+  * {
+    background: linear-gradient(to right, yellow, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 30px 90px yellow;
+  }
+  .text-white {
+    border: 1px solid yellow;
+    border-radius: 10px;
+  }
+}
+
+.text-yellow {
+  color: yellow;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: greenyellow;
+}
+.text-lightblue {
+  color: lightblue;
+}
+
+.team-member-red {
+  border: 1px solid red;
+  box-shadow: 0px 0px 90px red;
+  * {
+    background: linear-gradient(to right, red, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 30px 90px red;
+  }
+  .text-white {
+    border: 1px solid red;
+    border-radius: 10px;
+  }
+}
+
+.team-member-green {
+  border: 1px solid greenyellow;
+  box-shadow: 0px 0px 90px greenyellow;
+  * {
+    background: linear-gradient(to right, greenyellow, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 30px 90px greenyellow;
+  }
+  .text-white {
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+  }
+}
+
+.team-member-lightblue {
+  border: 1px solid lightblue;
+  box-shadow: 0px 0px 90px lightblue;
+  * {
+    background: linear-gradient(to right, lightblue, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 30px 90px lightblue;
+  }
+  .text-white {
+    border: 1px solid lightblue;
+    border-radius: 10px;
+  }
+}
+
+.team-member {
+  // border: 1px solid #2dd4bf;
+  // box-shadow: 0px 0px 90px #2dd4bf;
+  padding: 20px;
+  font-size: 14px;
+  .text-white {
+    -webkit-text-fill-color: white;
+    text-shadow: 10px 30px 90px white;
+  }
+  .text-white,
+  .text-light {
+    background: transparent;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .custom-30px-mobile {
+    margin-top: 0 !important;
+  }
+  @media (max-width: 480px) {
+    .custom-30px-mobile {
+      margin-top: 30px !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .text-white {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+  }
+  .text-light {
+    -webkit-text-fill-color: grey;
+    text-shadow: 10px 30px 90px grey;
+  }
+}
+
 .testimonial {
   border: 1px solid #2dd4bf;
   box-shadow: 0px 0px 90px #2dd4bf;
@@ -157,7 +274,8 @@
 }
 
 @media (max-width: 480px) {
-  .testimonial {
+  .testimonial,
+  .team-member {
     padding: 10px !important;
     width: 80% !important;
     height: 80% !important;

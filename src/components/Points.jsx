@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere } from "@react-three/drei";
-import { pointsInner, pointsOuter } from "@/utils/utils";
+import { pointsInner, pointsOuter } from "@/utils/utils2";
 import useMousePosition from "@/utils/useMousePosition";
 
 const PointsRing = ({ colorFromUser }) => {
@@ -9,7 +9,7 @@ const PointsRing = ({ colorFromUser }) => {
     <div className="absolute bg-transparent w-[100%] h-[100vh]">
       <Canvas
         camera={{
-          position: [0, 0, 20],
+          position: [0, 0, 30],
         }}
         style={{ height: "100vh" }}
         className="bg-transparent"
