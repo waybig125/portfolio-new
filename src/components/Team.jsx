@@ -28,7 +28,7 @@ const Team = () => {
       {/* <h1></h1> */}
       <div>
         <h1
-          className="items-center z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
+          className="items-center font-bold z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
           style={{ scrollSnapType: "none", fontSize: "30px" }}
         >
           <motion.a href="#team-section-content">MEET THE TEAM</motion.a>
