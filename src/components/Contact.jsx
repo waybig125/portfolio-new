@@ -43,8 +43,8 @@ const Contact = () => {
           to_email: "waybig125@gmail.com",
           message: form.message,
         },
-        // process.env.public_key,
-        "l98KVpayf9euEx8pI",
+        process.env.public_key,
+        // "l98KVpayf9euEx8pI",
       )
       .then(
         () => {
