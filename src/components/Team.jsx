@@ -5,36 +5,40 @@ import library from "@/utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PointsRing from "./Points";
 const Team = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
-  useEffect(() => {
-    if (isInView) {
-      window.addEventListener("wheel", (event) => {
-        event.preventDefault();
-        // getting the scrolling speed.
-        let deltaY = event.deltaY;
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, { once: false });
+  // useEffect(() => {
+  //   if (isInView) {
+  //     window.addEventListener("wheel", (event) => {
+  //       event.preventDefault();
+  //       // getting the scrolling speed.
+  //       let deltaY = event.deltaY;
 
-        // decreasing the scrolling speed by 50 times
-        let speed = deltaY * 500;
+  //       // decreasing the scrolling speed by 50 times
+  //       let speed = deltaY * 2;
 
-        // scrolling the content of the div element
-        window.scrollTop += speed;
-      });
-    }
-  }, [isInView]);
+  //       // scrolling the content of the div element
+  //       window.scrollTop += speed;
+  //     });
+  //   }
+  // }, [isInView]);
   return (
     <div>
       {/* <div className="snapped bg-yellow-100 h-[100vh] w-[100vw] flex"> */}
       {/* <h1></h1> */}
       <div>
         <h1
-          className="items-center font-bold z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
-          style={{ scrollSnapType: "none", fontSize: "30px" }}
+          className="items-center relative snapped font-bold z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
+          style={{ fontSize: "30px", scrollSnapStop: "always" }}
         >
           <motion.a href="#team-section-content">MEET THE TEAM</motion.a>
         </h1>
         {/* </div> */}
-        <a name="team-section-content" id="team-section-content" ref={ref}>
+        <a
+          name="team-section-content snapped"
+          id="team-section-content"
+          // ref={ref}
+        >
           <TeamMember
             color="yellow"
             name="M.Areeb Tahir"
@@ -85,13 +89,13 @@ const TeamMember = ({ color, name, job, job2, about }) => {
   return (
     <>
       <div
-        className="imp-200vh bg-black"
+        className="imp-vh bg-black snapped"
         ref={targetRef}
-        // style={{ scrollSnapType: "none" }}
+        style={{ scrollSnapType: "always", scrollSnapAlign: "auto" }}
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
-            <PointsRing colorFromUser={color} />
+            {/* <PointsRing colorFromUser={color} /> */}
             <div
               className={`w-[45%] h-[80%] team-member team-member-${color} block text-center items-center bg-black rounded-xl absolute left-[27.5%] top-[10%]`}
             >

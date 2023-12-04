@@ -6,7 +6,11 @@ import useMousePosition from "@/utils/useMousePosition";
 
 const ParticleRing = ({ colorFromUser }) => {
   return (
-    <div className="absolute bg-transparent w-[100%] h-[100vh]">
+    <div
+      className={`absolute bg-transparent w-[100%] h-[100vh] ${
+        colorFromUser == "black" && "z-[-1]"
+      }`}
+    >
       <Canvas
         camera={{
           position: [0, 0, 20],

@@ -1,9 +1,10 @@
 import {
-  // About, Hero,
-  Navbar,
-  StarsCanvas,
+  About,
+  // Hero,
+  // Navbar,
+  // StarsCanvas,
   Testimonials,
-  // Works,
+  Works,
   Contact,
 } from "@/components";
 import Team from "@/components/Team";
@@ -18,17 +19,17 @@ export default function Home() {
     <>
       {/* <SmoothScroll> */}
       <div className={`relative z-0 bg-black`}>
-        <div className="starsCanvas">
+        {/* <div className="starsCanvas">
           <StarsCanvas />
-        </div>
+        </div> */}
         <div className={``}>
-          <Navbar />
+          {/* <Navbar /> */}
           {/* <Hero /> */}
           {/* <About /> */}
           {/* <Team /> */}
-          <Contact />
-          {/* <Works /> */}
           {/* <Testimonials /> */}
+          <Works />
+          <Contact />
         </div>
       </div>
       {/* </SmoothScroll> */}

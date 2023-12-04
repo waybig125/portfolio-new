@@ -66,77 +66,80 @@ const Contact = () => {
   };
 
   return (
-    <div className={`xl:mt-12 flex gap-10 overflow-hidden`}>
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[1] bg-[#2dd4bf]/[0.05] border-[#2dd4bf] border-2 border-solid p-8 rounded-2xl"
-      >
-        <p className={`${styles.sectionSubText} text-[#f6f6f6]`}>
-          Get in touch
-        </p>
-        <h3
-          className={`${styles.sectionHeadText}`}
-          style={{ color: "#2dd4bf" }}
+    <div className={`p-[50px] h-[100vh] w-[100%] snapped`}>
+      <div className={`xl:mt-12 flex gap-10 overflow-hidden`}>
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="flex-[1] bg-[#2dd4bf]/[0.05] border-[#2dd4bf] border-2 border-solid p-8 rounded-2xl"
         >
-          Contact.
-        </h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-4 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            {/* <span className="text-black font-extrabold mb-2">Your Name</span> */}
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your Name?"
-              className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            {/* <span className="text-black font-extrabold mb-2">Your email</span> */}
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Your Email?"
-              className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            {/* <span className="text-black font-extrabold mb-2">Your Message</span> */}
-            <textarea
-              rows={1}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Your Message?"
-              className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid resize-none bg-[#000]/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
-            />
-          </label>
-
-          <button
-            type="submit"
-            className="bg-[#2dd4bf] border border-[#000] hover:border-[#2dd4bf] hover:bg-black hover:text-[#2dd4bf] py-3 px-8 rounded-xl outline-none w-fit text-black font-bold shadow-md shadow-[#000]"
+          <p className={`${styles.sectionSubText} text-[#f6f6f6]`}>
+            Get in touch
+          </p>
+          <h3
+            className={`${styles.sectionHeadText}`}
+            style={{ color: "#2dd4bf" }}
           >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </motion.div>
+            Contact.
+          </h3>
 
-      {/* <motion.div
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mt-4 flex flex-col gap-8"
+          >
+            <label className="flex flex-col">
+              {/* <span className="text-black font-extrabold mb-2">Your Name</span> */}
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your Name?"
+                className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              {/* <span className="text-black font-extrabold mb-2">Your email</span> */}
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Your Email?"
+                className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              {/* <span className="text-black font-extrabold mb-2">Your Message</span> */}
+              <textarea
+                rows={1}
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Your Message?"
+                className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid resize-none bg-[#000]/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="bg-[#2dd4bf] border border-[#000] hover:border-[#2dd4bf] hover:bg-black hover:text-[#2dd4bf] py-3 px-8 rounded-xl outline-none w-fit text-black font-bold shadow-md shadow-[#000]"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </motion.div>
+
+        {/* <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
       </motion.div> */}
+      </div>
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+// export default SectionWrapper(Contact, "contact");
+export default Contact;

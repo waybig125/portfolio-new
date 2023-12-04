@@ -39,16 +39,18 @@ const Works = () => {
           className="items-center z-[3] gradient-heading my-[20px] text-center snapped h-[100vh] w-[100%] main"
           id="project_heading"
         >
-          <motion.span>Our Projects</motion.span>
+          <motion.a href="#projects">Our Projects</motion.a>
         </h1>
-        <div
+        <a
           className={`items-center main bg-black h-[100vh] w-screen`}
           style={{ scrollSnapAlign: "center !important" }}
+          id="projects"
+          name="projects"
         >
           <Earth />
           <Projects />
           <ParticleRing colorFromUser="white" />
-        </div>
+        </a>
       </section>
     </>
   );

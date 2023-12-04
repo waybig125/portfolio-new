@@ -4,6 +4,7 @@ import { useRef } from "react";
 import library from "@/utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PointsRing from "./Points";
+import PhysicsRigidBody from "./canvas/PhysicsRigidBody";
 const Testimonials = () => {
   return (
     <div>
@@ -11,14 +12,19 @@ const Testimonials = () => {
       {/* <h1></h1> */}
       <div>
         <h1
-          className="items-center z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
-          style={{ scrollSnapType: "none", fontSize: "30px" }}
+          className="items-center snapped relative z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
+          style={{ scrollSnapType: "always", fontSize: "30px" }}
         >
-          <motion.span>SEE WHAT OTHERS SAY?</motion.span>
+          <motion.a href="#testimonials">TESTIMONIALS</motion.a>
         </h1>
+        {/* <div className={`h-[100vh] w-[100%] block`}>
+          <PhysicsRigidBody />
+        </div> */}
         {/* </div> */}
-        <Testimonial color="white" />
-        <Testimonial color="black" />
+        <a name="testmonials" id="testimonials">
+          <Testimonial color="white" />
+          <Testimonial color="black" />
+        </a>
       </div>
     </div>
   );
@@ -40,9 +46,9 @@ const Testimonial = ({ color }) => {
   return (
     <>
       <div
-        className="imp-200vh bg-black"
+        className="imp-vh snapped bg-black"
         ref={targetRef}
-        style={{ scrollSnapType: "none" }}
+        style={{ scrollSnapType: "always", scrollSnapAlign: "auto" }}
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
