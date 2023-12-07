@@ -28,10 +28,10 @@ const Hero = () => {
   return (
     <>
       <section
-        className={`relative w-full h-screen mx-auto snapped pt-[100px]`}
+        className={`relative w-full h-[60vh] mx-auto snapped pt-[100px]`}
       >
         <motion.div
-          className="rounded-full fixed z-[2] bg-[#000] h-[40px] w-[40px]"
+          className="rounded-full fixed z-[1] bg-[#000] h-[40px] w-[40px]"
           id="cursor-mouse"
           style={{
             left: x - 20,

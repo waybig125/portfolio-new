@@ -66,11 +66,16 @@ const Contact = () => {
   };
 
   return (
-    <div className={`p-[50px] h-[100vh] w-[100%] snapped`}>
-      <div className={`xl:mt-12 flex gap-10 overflow-hidden`}>
+    <a
+      id="contact"
+      name="contact"
+      className={`p-[50px] w-[100%]`}
+      style={{ scrollSnapType: "none" }}
+    >
+      <div className={`flex overflow-hidden`}>
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[1] bg-[#2dd4bf]/[0.05] border-[#2dd4bf] border-2 border-solid p-8 rounded-2xl"
+          className="flex-[1] w-[80%] bg-[#2dd4bf]/[0.05] border-[#2dd4bf] border-2 border-solid p-8 rounded-2xl"
         >
           <p className={`${styles.sectionSubText} text-[#f6f6f6]`}>
             Get in touch
@@ -137,7 +142,7 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div> */}
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -31,7 +31,9 @@ const Team = () => {
           className="items-center relative snapped font-bold z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
           style={{ fontSize: "30px", scrollSnapStop: "always" }}
         >
-          <motion.a href="#team-section-content">MEET THE TEAM</motion.a>
+          <motion.a href="#team-section-content" className={`z-[3]`}>
+            MEET THE TEAM
+          </motion.a>
         </h1>
         {/* </div> */}
         <a

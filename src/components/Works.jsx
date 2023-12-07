@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { styles } from "../app/styles";
 import Projects from "@/components/projects";
+import { Contact } from "@/components";
 import useMousePosition from "@/utils/useMousePosition";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
@@ -34,7 +35,7 @@ const Works = () => {
 
   return (
     <>
-      <section className="pham inset-0 h-auto w-screen bg-[#000}">
+      <section className="pham inset-0 h-auto w-screen bg-[#000]">
         <h1
           className="items-center z-[3] gradient-heading my-[20px] text-center snapped h-[100vh] w-[100%] main"
           id="project_heading"
@@ -47,10 +48,13 @@ const Works = () => {
           id="projects"
           name="projects"
         >
-          <Earth />
+          {/* <Earth /> */}
           <Projects />
-          <ParticleRing colorFromUser="white" />
+          {/* <ParticleRing colorFromUser="white" /> */}
         </a>
+        <div className={`items-center snapped bg-black h-[100vh] w-screen`}>
+          <Contact />
+        </div>
       </section>
     </>
   );
