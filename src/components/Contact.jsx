@@ -72,10 +72,12 @@ const Contact = () => {
       className={`p-[50px] w-[100%]`}
       style={{ scrollSnapType: "none" }}
     >
-      <div className={`flex overflow-hidden`}>
+      <div
+        className={`flex overflow-hidden align-center items-center justify-center`}
+      >
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[1] w-[80%] bg-[#2dd4bf]/[0.05] border-[#2dd4bf] border-2 border-solid p-8 rounded-2xl"
+          className="flex-[1] mx-[50px] w-[80%] bg-[#2dd4bf]/[0.05] border-[#2dd4bf] border-2 border-solid p-8 rounded-2xl"
         >
           <p className={`${styles.sectionSubText} text-[#f6f6f6]`}>
             Get in touch

@@ -31,7 +31,10 @@ const Team = () => {
           className="items-center relative snapped font-bold z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
           style={{ fontSize: "30px", scrollSnapStop: "always" }}
         >
-          <motion.a href="#team-section-content" className={`z-[3]`}>
+          <motion.a
+            href="#team-section-content"
+            className={`gradient-heading font-bold z-[9]`}
+          >
             MEET THE TEAM
           </motion.a>
         </h1>
@@ -97,7 +100,7 @@ const TeamMember = ({ color, name, job, job2, about }) => {
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
-            {/* <PointsRing colorFromUser={color} /> */}
+            <PointsRing colorFromUser={color} />
             <div
               className={`w-[45%] h-[80%] team-member team-member-${color} block text-center items-center bg-black rounded-xl absolute left-[27.5%] top-[10%]`}
             >

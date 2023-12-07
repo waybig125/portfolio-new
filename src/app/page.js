@@ -17,9 +17,9 @@ export default function Home() {
   return (
     <>
       <div className={`relative z-0 bg-black`}>
-        {/* <div className="starsCanvas">
+        <div className="starsCanvas">
           <StarsCanvas />
-        </div> */}
+        </div>
         <div className={``}>
           <Navbar />
           <Hero />

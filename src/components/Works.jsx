@@ -48,11 +48,13 @@ const Works = () => {
           id="projects"
           name="projects"
         >
-          {/* <Earth /> */}
+          <Earth />
           <Projects />
-          {/* <ParticleRing colorFromUser="white" /> */}
+          <ParticleRing colorFromUser="white" />
         </a>
-        <div className={`items-center snapped bg-black h-[100vh] w-screen`}>
+        <div
+          className={`items-center snapped bg-transparent h-[100vh] w-screen`}
+        >
           <Contact />
         </div>
       </section>
