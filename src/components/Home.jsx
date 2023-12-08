@@ -24,9 +24,9 @@ export default function Home() {
           <Navbar />
           <Hero />
           <About />
-          <Team />
-          <Testimonials />
-          <Works />
+          {/* <Team /> */}
+          {/* <Testimonials /> */}
+          {/* <Works /> */}
         </div>
       </div>
     </>

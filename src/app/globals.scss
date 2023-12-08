@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 10px;
+  background: white;
+  border: #2dd4bf;
+  border-radius: 25px;
+  transition: 0.1s;
+  &:hover {
+    opacity: 1;
+    background: whitesmoke;
+  }
+}
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: white;
+  opacity: 0.6;
+  border: white;
+  border-radius: 25px;
+  transition: 0.1s;
+  &:hover {
+    opacity: 1;
+    background: whitesmoke;
+  }
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+  background: linear-gradient(125deg, black, #2dd4bf);
+}
+
 .frame {
   width: 92vw;
   aspect-ratio: 16/8;
@@ -502,17 +531,17 @@ html {
     #2dd4bf 0%,
     rgba(60, 51, 80, 0) 100%
   );
-  background: -moz-linear-gradient(
-    -90deg,
-    #2dd4bf 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
-  background: -ms-linear-gradient(-90deg, #2dd4bf 0%, rgba(60, 51, 80, 0) 100%);
-  background: -khtml-linear-gradient(
-    -90deg,
-    #2dd4bf 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
+  // background: -moz-linear-gradient(
+  //   -90deg,
+  //   #2dd4bf 0%,
+  //   rgba(60, 51, 80, 0) 100%
+  // );
+  // background: -ms-linear-gradient(-90deg, #2dd4bf 0%, rgba(60, 51, 80, 0) 100%);
+  // background: -khtml-linear-gradient(
+  //   -90deg,
+  //   #2dd4bf 0%,
+  //   rgba(60, 51, 80, 0) 100%
+  // );
 }
 
 .green-pink-gradient {
