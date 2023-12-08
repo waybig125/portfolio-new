@@ -3,9 +3,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { styles } from "../app/styles";
 import { textVariant } from "@/utils/motions";
-// import { ComputersCanvas } from "./canvas";
-// import TypeIt from "typeit-react";
-// import { About, Experience } from ".";
 import useMousePosition from "@/utils/useMousePosition";
 import { useRef } from "react";
 
@@ -71,7 +68,7 @@ const Hero = () => {
         style={{ scrollSnapType: "none" }}
       >
         <div className="sticky top-0 h-screen z-[3]">
-          <Trippy rotate={rotate} />
+          <Trippy rotate={rotate} countNum={1} />
         </div>
       </section>
     </>
@@ -81,23 +78,35 @@ const Hero = () => {
 const NUM_SECTIONS = 100;
 const PADDING = `${100 / NUM_SECTIONS / 2}vmin`;
 
-const generateSections = ({ count, color, rotate }) => {
+const generateSections = ({ count, color, rotate, countNum }) => {
   if (count >= NUM_SECTIONS) {
     return <></>;
   }
-  const nextColor = color === "black" ? "#2dd4bf" : "black";
+  let nextColor = color === "black" ? "#2dd4bf" : "black";
+  let nextCountNum = countNum + 1;
+  nextColor = nextCountNum % 6 == 0 ? "white" : nextColor;
   let newCount = count + 1;
   return (
     <SectionComp rotate={rotate} background={color}>
-      {generateSections({ count: newCount, color: nextColor, rotate: rotate })}
+      {generateSections({
+        count: newCount,
+        countNum: nextCountNum,
+        color: nextColor,
+        rotate: rotate,
+      })}
     </SectionComp>
   );
 };
 
-const Trippy = ({ rotate }) => {
+const Trippy = ({ rotate, countNum }) => {
   return (
     <div className="absolute inset-0 overflow-hidden bg-black">
-      {generateSections({ count: 0, color: "black", rotate: rotate })}
+      {generateSections({
+        count: 0,
+        color: "black",
+        countNum: countNum,
+        rotate: rotate,
+      })}
     </div>
   );
 };
