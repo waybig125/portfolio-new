@@ -53,7 +53,7 @@ const Testimonial = ({ color }) => {
       <div
         className="imp-vh snapped bg-black"
         ref={targetRef}
-        style={{ scrollSnapType: "always", scrollSnapAlign: "auto" }}
+        style={{ scrollSnapStop: "always", scrollSnapAlign: "auto" }}
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
