@@ -102,7 +102,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your Name?"
-                className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
+                className="focus:border-[#2dd4bf]/[0.5] z-[3] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -113,7 +113,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Your Email?"
-                className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
+                className="focus:border-[#2dd4bf]/[0.5] z-[3] border-[#2dd4bf] border border-solid bg-black/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -124,7 +124,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Your Message?"
-                className="focus:border-[#2dd4bf]/[0.5] border-[#2dd4bf] border border-solid resize-none bg-[#000]/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
+                className="focus:border-[#2dd4bf]/[0.5] z-[3] border-[#2dd4bf] border border-solid resize-none bg-[#000]/[0.5] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium"
               />
             </label>
 
