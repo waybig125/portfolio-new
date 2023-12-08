@@ -7,11 +7,6 @@ import {
   Works,
 } from "@/components";
 import Team from "@/components/Team";
-// import LaptopModelCanvas from "@/components/Laptop";
-// import LaptopModelCanvas from "../components/Laptop";
-// import SmoothScroll from "@/components/smoothScroll";
-// import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
-// import Image from "next/image";
 
 export default function Home() {
   return (
@@ -24,9 +19,9 @@ export default function Home() {
           <Navbar />
           <Hero />
           <About />
-          {/* <Team /> */}
-          {/* <Testimonials /> */}
-          {/* <Works /> */}
+          <Team />
+          <Testimonials />
+          <Works />
         </div>
       </div>
     </>
