@@ -1,4 +1,6 @@
 import { Poppins } from "next/font/google";
+import { Suspense } from "react";
+import Preloader from "@/components/Preloader";
 import "./globals.scss";
 import library from "@/utils/fontawesome";
 const poppins = Poppins({
@@ -21,7 +23,9 @@ export default function RootLayout({ children }) {
           content="width=device-width, initial-scale=1.0,-scalable=no"
         />
       </head>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Suspense fallback={<Preloader />}>{children}</Suspense>
+      </body>
     </html>
   );
 }
