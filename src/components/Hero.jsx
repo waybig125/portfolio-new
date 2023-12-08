@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <>
       <section
-        className={`relative w-full h-[50vh] mx-auto snapped pt-[100px]`}
+        className={`relative w-full h-[60vh] mx-auto snapped pt-[100px]`}
       >
         <motion.div
           className="rounded-full fixed z-[1] bg-[#000] h-[40px] w-[40px]"

@@ -56,18 +56,26 @@ const Testimonial = ({ color }) => {
         style={{ scrollSnapStop: "always", scrollSnapAlign: "auto" }}
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
-          <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
+          <div className="h-[300vh] snapped flex-none items-center w-[100%] text-center z-[1]">
             <PointsRing colorFromUser={color} />
             <div className="w-[50%] h-[50%] testimonial flex text-center items-center bg-black rounded-xl absolute left-[25%] top-[25%]">
-              <div className="w-[20%]">
-                <FontAwesomeIcon icon="fa-user" />
+              <div className="">
+                {/* <FontAwesomeIcon icon="fa-user" /> */}
+                <h1
+                  className={`text-white mx-[20px] text-[30px]`}
+                  style={{ writingMode: "vertical-lr" }}
+                >
+                  User
+                </h1>
               </div>
-              <div className="w-[80%]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur, consequuntur. Exercitationem, deserunt rerum, magnam
-                dolorem saepe minus nemo vel temporibus architecto, facilis
-                accusantium aliquid veniam soluta veritatis! Eum, expedita
-                ratione?
+              <div className="text-left">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur, consequuntur. Exercitationem, deserunt rerum, magnam
+                  dolorem saepe minus nemo vel temporibus architecto, facilis
+                  accusantium aliquid veniam soluta veritatis! Eum, expedita
+                  ratione?
+                </p>
               </div>
             </div>
           </div>
@@ -76,15 +84,23 @@ const Testimonial = ({ color }) => {
             style={{ x }}
           >
             <div className="w-[50%] h-[50%] testimonial flex text-center items-center bg-black rounded-xl absolute left-[25%] top-[25%]">
-              <div className="w-[20%]">
-                <FontAwesomeIcon icon="fa-user" />
+              <div className="">
+                {/* <FontAwesomeIcon icon="fa-user" /> */}
+                <h1
+                  className={`text-white mx-[20px] text-[30px]`}
+                  style={{ writingMode: "vertical-lr" }}
+                >
+                  User
+                </h1>
               </div>
-              <div className="w-[80%]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur, consequuntur. Exercitationem, deserunt rerum, magnam
-                dolorem saepe minus nemo vel temporibus architecto, facilis
-                accusantium aliquid veniam soluta veritatis! Eum, expedita
-                ratione?
+              <div className="text-left">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur, consequuntur. Exercitationem, deserunt rerum, magnam
+                  dolorem saepe minus nemo vel temporibus architecto, facilis
+                  accusantium aliquid veniam soluta veritatis! Eum, expedita
+                  ratione?
+                </p>
               </div>
             </div>
           </motion.div>
