@@ -60,12 +60,19 @@ const About = () => {
               }
             }}
           >
-            We are a team — struggling with disjointed efforts, our web
+            {/* We are a team — struggling with disjointed efforts, our web
             developers often face technical hurdles, while our social media
             marketers grapple with engagement issues. Our SEO experts&apos;
             strategies often fall short, leading to diminished online
             visibility. Despite efforts, innovation remains stagnant, hindering
-            our ability to redefine digital success.
+            our ability to redefine digital success. */}
+            We are an exceptional team, combining the talents of web development
+            experts, social media specialists, and SEO professionals. Together,
+            we create remarkable online experiences, bringing your digital
+            aspirations to life. Our commitment to innovation and unwavering
+            pursuit of excellence are the driving forces behind our success. We
+            take pride in delivering customized solutions that redefine the
+            digital landscape.
           </p>
         </motion.div>
 
