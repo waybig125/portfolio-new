@@ -7,11 +7,13 @@ import {
   Works,
 } from "@/components";
 import Team from "@/components/Team";
+import Preloader from '@/components/Preloader'
 
 export default function Home() {
   return (
     <>
       <div className={`relative z-0 bg-black`}>
+        <Preloader />
         <div className="starsCanvas">
           <StarsCanvas />
         </div>
