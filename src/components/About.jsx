@@ -36,6 +36,7 @@ const About = () => {
       style={{
         scrollSnapStop: "always",
       }}
+      id={`about`}
     >
       <main className={`${styles.main} h-[100%] pham-text`}>
         <motion.div
