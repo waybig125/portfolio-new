@@ -7,7 +7,7 @@ import {
   Works,
 } from "@/components";
 import Team from "@/components/Team";
-import Preloader from '@/components/Preloader'
+import Preloader from "@/components/Preloader";
 
 export default function Home() {
   return (
