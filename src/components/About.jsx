@@ -39,7 +39,7 @@ const About = () => {
     >
       <main className={`${styles.main} h-[100%] pham-text`}>
         <motion.div
-          className={`h-[100%] ${styles.mask}`}
+          className={`h-[100%] scale-[-1] ${styles.mask}`}
           animate={
             !isMobile && {
               WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
@@ -60,12 +60,20 @@ const About = () => {
               }
             }}
           >
-            We are a team — struggling with disjointed efforts, our web
+            {/* We are a team — struggling with disjointed efforts, our web
             developers often face technical hurdles, while our social media
             marketers grapple with engagement issues. Our SEO experts&apos;
             strategies often fall short, leading to diminished online
             visibility. Despite efforts, innovation remains stagnant, hindering
-            our ability to redefine digital success.
+            our ability to redefine digital success. */}
+            We are a stellar team — a synergy of{" "}
+            <span>web development virtuosos</span>,{" "}
+            <span>social media mavens</span>, and <span>SEO wizards</span>. With
+            our expertise and dedication, we breathe life into digital
+            aspirations, weaving captivating online journeys. Our passion for{" "}
+            <span>innovation</span> and relentless pursuit of excellence form
+            the cornerstone of our success, delivering tailored solutions that
+            redefine the <span>digital landscape</span>.
           </p>
         </motion.div>
 

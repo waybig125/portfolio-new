@@ -10,7 +10,7 @@ const Testimonials = () => {
       <div>
         <h1
           className="items-center snapped relative z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
-          style={{ scrollSnapType: "always", fontSize: "30px" }}
+          style={{ scrollSnapStopa: "always", fontSize: "30px" }}
         >
           <motion.a
             href="#testimonials"
