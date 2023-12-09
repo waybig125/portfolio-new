@@ -20,7 +20,7 @@ export default function Preloader() {
             transition={{
               // type: "spring",
               // stiffness: 100,
-              ease: "linear",
+              ease: "ease-in-out",
               duration: 2,
             }}
             exit={{ top: "-100%" }}
