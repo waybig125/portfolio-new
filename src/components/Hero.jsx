@@ -5,6 +5,7 @@ import { styles } from "../app/styles";
 import { textVariant } from "@/utils/motions";
 import useMousePosition from "@/utils/useMousePosition";
 import { useRef } from "react";
+import Typed from "react-typed";
 
 const Hero = () => {
   // const [isHovered, setIsHovered] = useState(false);
@@ -54,7 +55,17 @@ const Hero = () => {
               We are <span className={`text-[#2dd4bf]`}>Axisio</span>
             </motion.h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              A Team Of Expert Web Developers
+              A Team Of{" "}
+              <Typed
+                strings={[
+                  "Expert Web Developers.",
+                  "SEO Specialists.",
+                  "Digital Marketng Mavens.",
+                ]}
+                typeSpeed={150}
+                backSpeed={100}
+                loop
+              />
             </p>
           </div>
         </div>
