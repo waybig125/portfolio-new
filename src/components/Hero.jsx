@@ -1,5 +1,4 @@
 "use client";
-// import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { styles } from "../app/styles";
 import { textVariant } from "@/utils/motions";
@@ -8,7 +7,6 @@ import { useRef } from "react";
 import Typed from "react-typed";
 
 const Hero = () => {
-  // const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
 
   const targetRef = useRef();
@@ -69,9 +67,6 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        {/* <ComputersCanvas /> */}
-        {/* <About /> */}
-        {/* <Experience /> */}
       </section>
       <section
         className={`snapped imp-800vh`}

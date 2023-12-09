@@ -2,19 +2,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 export default function Preloader() {
-  // const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const load = () => {
       setTimeout(() => setLoading(false), 200);
     };
     load();
-    // window.onload = load();
-    // alert(window.onload);
-    // window.addEventListener("DOMContentLoaded", load);
-    // return () => {
-    // window.removeEventListener("DOMContentLoaded", lo);
-    // };
   });
   return (
     <>

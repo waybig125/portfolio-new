@@ -1,15 +1,12 @@
 "use client";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import library from "@/utils/fontawesome";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import library from "@/utils/fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PointsRing from "./Points";
-import PhysicsRigidBody from "./canvas/PhysicsRigidBody";
 const Testimonials = () => {
   return (
     <div>
-      {/* <div className="snapped bg-yellow-100 h-[100vh] w-[100vw] flex"> */}
-      {/* <h1></h1> */}
       <div>
         <h1
           className="items-center snapped relative z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
@@ -22,10 +19,6 @@ const Testimonials = () => {
             TESTIMONIALS
           </motion.a>
         </h1>
-        {/* <div className={`h-[100vh] w-[100%] block`}>
-          <PhysicsRigidBody />
-        </div> */}
-        {/* </div> */}
         <a name="testmonials" id="testimonials">
           <Testimonial color="white" />
           <Testimonial color="black" />
