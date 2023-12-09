@@ -18,7 +18,7 @@ const Navbar = () => {
         <AnimatePresence>
           {toggle && (
             <div
-              className={`fixed text-center py-[60px] left-0 bottom-[70px] h-[90vh] w-[60px] bg-transparent`}
+              className={`fixed text-center py-[60px] left-0 bottom-[70px] h-[100vh] w-[60px] bg-transparent`}
               exit={{ height: 0 }}
               transition={{ ease: "ease-in-out", duration: 2, delay: 0.2 }}
             >
@@ -50,13 +50,13 @@ const Navbar = () => {
               >
                 Team
               </a>
-              <a
+              {/* <a
                 href="/#testimonials"
                 style={{ writingMode: "vertical-lr" }}
                 className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
               >
                 Testimonials
-              </a>
+              </a> */}
               <a
                 href="/#contact"
                 style={{ writingMode: "vertical-lr" }}
