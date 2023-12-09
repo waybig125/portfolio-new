@@ -6,19 +6,19 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`flex flex-row text-white h-[60px] fixed z-[999] top-0 left-0 bg-transparent w-[100vw] text-center align-center items-center justify-center`}
+        className={`flex flex-row text-white h-[60px] fixed z-[999] bottom-0 left-0 bg-transparent w-[100vw] text-center align-center items-center justify-center`}
       >
         <a
           type="button"
           onClick={() => setToggle(!toggle)}
-          className={`cursor-pointer logo p-[2px] rounded-full w-[50px] h-[50px] hover:bg-[#2dd4bf]/[0.8] bg-b fixed left-[10px] top-[10px] z-[999]`}
+          className={`cursor-pointer logo p-[2px] rounded-full w-[50px] h-[50px] hover:bg-[#2dd4bf]/[0.8] bg-b fixed left-[10px] bottom-[10px] z-[999]`}
         >
           <img src={`./assets/Logo-Dark.gif`} className={`rounded-full`} />
         </a>
         <AnimatePresence>
           {toggle && (
             <div
-              className={`fixed text-center py-[60px] left-0 top-0 h-[90vh] w-[60px] bg-transparent`}
+              className={`fixed text-center py-[60px] left-0 bottom-0 h-[90vh] w-[60px] bg-transparent`}
               exit={{ height: 0 }}
               transition={{ ease: "ease-in-out", duration: 2, delay: 0.2 }}
             >
