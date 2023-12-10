@@ -3,7 +3,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 // import library from "@/utils/fontawesome";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PointsRing from "./Points";
+// import PointsRing from "./Points";
 const Testimonials = () => {
   return (
     <div>
@@ -50,7 +50,7 @@ const Testimonial = ({ color }) => {
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[300vh] snapped flex-none items-center w-[100%] text-center z-[1]">
-            <PointsRing colorFromUser={color} />
+            {/* <PointsRing colorFromUser={color} /> */}
             <div className="w-[50%] h-[50%] testimonial flex text-center items-center bg-black rounded-xl absolute left-[25%] top-[25%]">
               <div className="">
                 {/* <FontAwesomeIcon icon="fa-user" /> */}
