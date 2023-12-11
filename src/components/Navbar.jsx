@@ -20,7 +20,7 @@ const Navbar = () => {
             <div
               className={`fixed text-center py-[60px] left-0 bottom-[70px] h-[90vh] w-[60px] bg-transparent`}
               exit={{ height: 0 }}
-              transition={{ ease: "ease-in-out", duration: 2, delay: 0.2 }}
+              transition={{ ease: "linear", duration: 1, delay: 0.2 }}
             >
               <a
                 href="/#"
