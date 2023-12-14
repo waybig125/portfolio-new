@@ -1,16 +1,13 @@
 "use client";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-// import library from "@/utils/fontawesome";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import PointsRing from "./Points";
 const Testimonials = () => {
   return (
     <div>
       <div>
         <h1
           className="items-center snapped relative z-[3] gradient-heading my-[20px] text-center h-[100vh] w-[100%] testimonial-head"
-          style={{ scrollSnapStopa: "always", fontSize: "30px" }}
+          style={{ scrollSnapStop: "always", fontSize: "30px" }}
         >
           <motion.a
             href="#testimonials"

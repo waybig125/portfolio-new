@@ -1,6 +1,6 @@
 "use client";
-import { motion, useTransform, useScroll, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
 import library from "@/utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import PointsRing from "./Points";
