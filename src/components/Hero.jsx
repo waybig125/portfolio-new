@@ -81,7 +81,7 @@ const Hero = () => {
   );
 };
 
-const NUM_SECTIONS = 100;
+const NUM_SECTIONS = 20;
 const PADDING = `${100 / NUM_SECTIONS / 2}vmin`;
 
 const generateSections = ({ count, color, rotate, countNum }) => {

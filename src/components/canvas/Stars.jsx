@@ -9,7 +9,7 @@ const Stars = (props) => {
   const { x, y } = useMousePosition();
   const ref = useRef();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(900), { radius: 1.2 }),
+    random.inSphere(new Float32Array(500), { radius: 1.2 }),
   );
 
   useFrame((state, delta) => {
@@ -35,7 +35,7 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className="w-full h-[100vh] fixed inset-0 z-[-1]">
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 1.5] }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
