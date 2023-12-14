@@ -25,42 +25,42 @@ const Navbar = () => {
               <a
                 href="/#"
                 style={{ writingMode: "vertical-lr" }}
-                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
+                className={`block hover:text-[#000] border border-[#2dd4bf] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] mx-[10px] my-[10px]`}
               >
                 Home
               </a>
               <a
                 href="/#about"
                 style={{ writingMode: "vertical-lr" }}
-                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
+                className={`block hover:text-[#000] border border-[#2dd4bf] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] mx-[10px] my-[10px]`}
               >
                 About
               </a>
               <a
                 href="/#projects"
                 style={{ writingMode: "vertical-lr" }}
-                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
+                className={`block hover:text-[#000] border border-[#2dd4bf] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] mx-[10px] my-[10px]`}
               >
                 Projects
               </a>
               <a
                 href="/#team-section-content"
                 style={{ writingMode: "vertical-lr" }}
-                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
+                className={`block hover:text-[#000] border border-[#2dd4bf] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] mx-[10px] my-[10px]`}
               >
                 Team
               </a>
               {/* <a
                 href="/#testimonials"
                 style={{ writingMode: "vertical-lr" }}
-                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
+                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] mx-[10px] my-[10px]`}
               >
                 Testimonials
               </a> */}
               <a
                 href="/#contact"
                 style={{ writingMode: "vertical-lr" }}
-                className={`block hover:text-[#000] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] shadow-lg shadow-[#2dd4bf] mx-[10px] my-[10px]`}
+                className={`block hover:text-[#000] border border-[#2dd4bf] hover:bg-[#2dd4bfc5] text-center rounded-xl bg-[#000] p-[10px] mx-[10px] my-[10px]`}
               >
                 Contact
               </a>
