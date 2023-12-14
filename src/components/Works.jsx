@@ -1,21 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useRef, Suspense, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { styles } from "../app/styles";
 import Projects from "@/components/projects";
 import { Contact } from "@/components";
 import useMousePosition from "@/utils/useMousePosition";
-import { useRef } from "react";
 import dynamic from "next/dynamic";
-import {
-  motion,
-  useTransform,
-  useScroll,
-  useInView,
-  useAnimation,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
 import ParticleRing from "./Particles";
 
 const Works = () => {
@@ -40,7 +30,7 @@ const Works = () => {
           className="items-center bg-transparent z-[3] gradient-heading my-[20px] text-center snapped h-[100vh] w-[100%] main"
           id="project_heading"
         >
-          <motion.a href="#projects">Our Projects</motion.a>
+          <a href="#projects">Our Projects</a>
         </h1>
         <a
           className={`items-center main bg-black h-[100vh] w-screen`}
@@ -49,13 +39,17 @@ const Works = () => {
           name="projects"
         >
           <Earth />
-          <Projects />
+          <Suspense fallback={"Loading..."}>
+            <Projects />
+          </Suspense>
           <ParticleRing colorFromUser="white" />
         </a>
         <div
           className={`items-center snapped bg-transparent h-[100vh] w-screen`}
         >
-          <Contact />
+          <Suspense fallback={"Loading..."}>
+            <Contact />
+          </Suspense>
         </div>
       </section>
     </>

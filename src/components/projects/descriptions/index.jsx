@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import styles from "./style.module.scss";
 import useMousePosition from "@/utils/useMousePosition";
-// import { Canvas } from "@react-three/fiber";
-import { useGLTF, Environment } from "@react-three/drei";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import library from "@/utils/fontawesome";
 import ParticleRing from "@/components/Particles";
-
+import Preloader from "@/components/Preloader";
 export default function Descriptions({
   data,
   selectedProject,
@@ -105,83 +103,90 @@ export default function Descriptions({
               style={visibleClickedCriteria}
             >
               {!isSecondScreen && (
-                <div
-                  className="items-center text-center"
-                  style={{ alignItems: "center" }}
-                >
+                <Suspense fallback={<Preloader />}>
                   <div
-                    className={
-                      "h-[300px] fixed w-[15px] z-[9999] rounded-full text-[#2dd4bf] bg-black boxes top-[20px] p-[5px] left-[5px]"
-                    }
-                    onClick={() => setClickedProject(10)}
+                    className="items-center text-center"
+                    style={{ alignItems: "center" }}
                   >
                     <div
-                      className="fixed top-[20px] left-[10px] h-[20px] bg-black pointer-events-auto z-[9999] p-[5px] text-sm w-[20px] rounded-full text-[#2dd4bf] boxes animateBoxes"
-                      style={visibleClickedCriteria2}
-                      title="Close"
+                      className={
+                        "h-[300px] fixed w-[15px] z-[9999] rounded-full text-[#2dd4bf] bg-black boxes top-[20px] p-[5px] left-[5px]"
+                      }
+                      onClick={() => setClickedProject(10)}
                     >
-                      <FontAwesomeIcon
+                      <div
+                        className="fixed top-[20px] left-[10px] h-[20px] bg-black pointer-events-auto z-[9999] p-[5px] text-sm w-[20px] rounded-full text-[#2dd4bf] boxes animateBoxes"
+                        style={visibleClickedCriteria2}
                         title="Close"
-                        icon="xmark"
-                        onClick={() => setClickedProject(10)}
-                      />
+                      >
+                        <FontAwesomeIcon
+                          title="Close"
+                          icon="xmark"
+                          onClick={() => setClickedProject(10)}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className={
-                      "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] right-[5px]"
-                    }
-                    onClick={() => setIsSecondScreen(true)}
-                  >
                     <div
-                      title="Read More"
-                      className="h-[20px] p-[5px] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] right-[10px]"
+                      className={
+                        "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] right-[5px]"
+                      }
+                      onClick={() => setIsSecondScreen(true)}
                     >
-                      <FontAwesomeIcon
+                      <div
                         title="Read More"
-                        icon="anchor"
-                        onClick={() => setIsSecondScreen(true)}
-                      />
+                        className="h-[20px] p-[5px] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] right-[10px]"
+                      >
+                        <FontAwesomeIcon
+                          title="Read More"
+                          icon="anchor"
+                          onClick={() => setIsSecondScreen(true)}
+                        />
+                      </div>
                     </div>
+                    <iframe
+                      src={website}
+                      frameBorder="0"
+                      className="frame z-[9999]"
+                      loading="lazy"
+                    ></iframe>
                   </div>
-                  <iframe
-                    src={website}
-                    frameBorder="0"
-                    className="frame z-[9999]"
-                    loading="lazy"
-                  ></iframe>
-                </div>
+                </Suspense>
               )}
 
               {isSecondScreen && (
-                <div className="fixed overflow-auto text-white z-[999] bg-black h-[100vh] w-[100%]">
-                  <div className={`z-[-1]`} style={{ zIndex: "-2 !important" }}>
-                    <ParticleRing colorFromUser="black" />
-                  </div>
-                  <h1 className="text-[#2dd4bf] text-4xl about-heading-mobile uppercase mt-[100px] mb-[-40px]">
-                    Project Details
-                  </h1>
-                  <p className="mt-[100px] text-md text-white rounded-xl paragraph-about z-[99999]">
-                    {about}
-                  </p>
-                  <div
-                    className={
-                      "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] left-[5px]"
-                    }
-                    onClick={() => setIsSecondScreen(false)}
-                  >
+                <Suspense fallback={<Preloader />}>
+                  <div className="fixed overflow-auto text-white z-[999] bg-black h-[100vh] w-[100%]">
                     <div
-                      title="Close"
-                      className="h-[20px] p-[5px] z-[10000] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] left-[10px]"
+                      className={`z-[-1]`}
+                      style={{ zIndex: "-2 !important" }}
                     >
-                      <FontAwesomeIcon
+                      <ParticleRing colorFromUser="black" />
+                    </div>
+                    <h1 className="text-[#2dd4bf] text-4xl about-heading-mobile uppercase mt-[100px] mb-[-40px]">
+                      Project Details
+                    </h1>
+                    <p className="mt-[100px] text-md text-white rounded-xl paragraph-about z-[99999]">
+                      {about}
+                    </p>
+                    <div
+                      className={
+                        "h-[300px] w-[15px] rounded-full text-[#2dd4bf] bg-black fixed boxes top-[20px] p-[5px] left-[5px]"
+                      }
+                      onClick={() => setIsSecondScreen(false)}
+                    >
+                      <div
                         title="Close"
-                        icon="xmark"
-                        onClick={() => setIsSecondScreen(false)}
-                      />
+                        className="h-[20px] p-[5px] z-[10000] text-sm w-[20px] rounded-full text-[#2dd4bf] bg-black fixed boxes animateBoxes top-[20px] left-[10px]"
+                      >
+                        <FontAwesomeIcon
+                          title="Close"
+                          icon="xmark"
+                          onClick={() => setIsSecondScreen(false)}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Suspense>
               )}
             </div>
           </div>

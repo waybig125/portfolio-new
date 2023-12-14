@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import styles from "./style.module.scss";
 import Titles from "./titles";
 import Descriptions from "./descriptions";
@@ -37,12 +37,14 @@ export default function Projects() {
         setSelectedProject={setSelectedProject}
         setClickedProject={setClickedProject}
       />
-      <Descriptions
-        data={data}
-        selectedProject={selectedProject}
-        setClickedProject={setClickedProject}
-        clickedProject={clickedProject}
-      />
+      <Suspense fallback={"Loading..."}>
+        <Descriptions
+          data={data}
+          selectedProject={selectedProject}
+          setClickedProject={setClickedProject}
+          clickedProject={clickedProject}
+        />
+      </Suspense>
     </div>
   );
 }

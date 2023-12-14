@@ -8,6 +8,7 @@ import {
 } from "@/components";
 import Team from "@/components/Team";
 import Preloader from "@/components/Preloader";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -21,9 +22,15 @@ export default function Home() {
           <Navbar />
           <Hero />
           <About />
-          <Team />
-          <Testimonials />
-          <Works />
+          <Suspense fallback={"Loading..."}>
+            <Team />
+          </Suspense>
+          <Suspense fallback={"Loading..."}>
+            <Testimonials />
+          </Suspense>
+          <Suspense fallback={"Loading..."}>
+            <Works />
+          </Suspense>
         </div>
       </div>
     </>
