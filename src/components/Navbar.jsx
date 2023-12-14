@@ -13,7 +13,10 @@ const Navbar = () => {
           onClick={() => setToggle(!toggle)}
           className={`cursor-pointer logo p-[2px] rounded-full w-[50px] h-[50px] hover:bg-[#2dd4bf]/[0.8] bg-b fixed left-[10px] bottom-[10px] z-[999]`}
         >
-          <img src={`./assets/Logo-Dark.gif`} className={`rounded-full`} />
+          <img
+            src={`./assets/Logo-Dark.gif`}
+            className={`rounded-full w-[100%] height-[100%]`}
+          />
         </a>
         <AnimatePresence>
           {toggle && (
