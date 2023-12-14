@@ -95,6 +95,7 @@ export default function Descriptions({
                 src={screenshot}
                 alt={title}
                 className={"customImgBoxImg rounded-xl"}
+                defer
               />
             </p>
 
