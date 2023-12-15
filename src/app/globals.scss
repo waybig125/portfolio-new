@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar,
-::-moz-scrollbar,
-::-ms-scrollbar,
-::-khtml-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
   background: white;
   border: #2dd4bf;
@@ -16,10 +13,8 @@
     background: whitesmoke;
   }
 }
-::-webkit-scrollbar-thumb,
-::-moz-scrollbar-thumb,
-::-ms-scrollbar-thumb,
-::-khtml-scrollbar-thumb {
+
+::-webkit-scrollbar-thumb {
   width: 10px;
   background-color: white;
   opacity: 0.6;
@@ -32,10 +27,7 @@
   }
 }
 
-::-webkit-scrollbar-track,
-::-moz-scrollbar-track,
-::-ms-scrollbar-track,
-::-khtml-scrollbar-track {
+::-webkit-scrollbar-track {
   width: 10px;
   background: linear-gradient(125deg, black, #2dd4bf);
 }
