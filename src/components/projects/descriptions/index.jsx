@@ -145,6 +145,7 @@ export default function Descriptions({
                       </div>
                     </div>
                     <iframe
+                      defer
                       src={website}
                       frameBorder="0"
                       className="frame z-[9999]"
