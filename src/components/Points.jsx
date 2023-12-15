@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sphere } from "@react-three/drei";
 import { pointsInner, pointsOuter } from "@/utils/utils2";
-import useMousePosition from "@/utils/useMousePosition";
+// import useMousePosition from "@/utils/useMousePosition";
 
 const PointsRing = ({ colorFromUser }) => {
   return (
@@ -28,7 +28,6 @@ const PointsRing = ({ colorFromUser }) => {
 };
 
 const PointCircle = () => {
-  const { x, y } = useMousePosition();
   const ref = useRef(null);
 
   useFrame((state, delta) => {
@@ -43,7 +42,7 @@ const PointCircle = () => {
   //   });
 
   return (
-    <group ref={ref} rotation-y={y * 0.01} rotation-x={x * 0.01}>
+    <group ref={ref}>
       {pointsInner.map((point) => (
         <Point key={point.idx} position={point.position} color={point.color} />
       ))}

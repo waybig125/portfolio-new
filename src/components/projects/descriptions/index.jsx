@@ -92,6 +92,8 @@ export default function Descriptions({
               className="z-[3] customImgBox rounded-xl bg-[#000] mx-[10px]"
             >
               <img
+                height="360"
+                width="640"
                 src={screenshot}
                 alt={title}
                 className={"customImgBoxImg rounded-xl"}
