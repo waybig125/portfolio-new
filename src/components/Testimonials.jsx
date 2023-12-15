@@ -35,7 +35,7 @@ const Testimonial = ({ color }) => {
 
   const x = useTransform(
     scrollYProgress,
-    [0, 0.8, 1],
+    [0, 0.6, 1],
     ["1%", "-100%", "-100%"],
   );
   return (
