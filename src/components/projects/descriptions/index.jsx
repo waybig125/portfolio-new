@@ -95,7 +95,7 @@ export default function Descriptions({
                 src={screenshot}
                 alt={title}
                 className={"customImgBoxImg rounded-xl"}
-                defer
+                defer="defer"
               />
             </p>
 
@@ -145,7 +145,7 @@ export default function Descriptions({
                       </div>
                     </div>
                     <iframe
-                      defer
+                      defer="defer"
                       src={website}
                       frameBorder="0"
                       className="frame z-[9999]"
