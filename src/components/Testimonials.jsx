@@ -35,7 +35,7 @@ const Testimonial = ({ color }) => {
 
   const x = useTransform(
     scrollYProgress,
-    [0, 0.6, 1],
+    [0, 0.9, 1],
     ["1%", "-100%", "-100%"],
   );
   return (
@@ -48,11 +48,11 @@ const Testimonial = ({ color }) => {
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[300vh] snapped flex-none items-center w-[100%] text-center z-[1]">
             {/* <PointsRing colorFromUser={color} /> */}
-            <div className="w-[50%] h-[50%] testimonial flex text-center items-center bg-black rounded-xl absolute left-[25%] top-[25%]">
+            <div className="w-[50%] h-[50%] testimonial gap-[20px] flex text-center items-center bg-black rounded-xl absolute left-[25%] top-[25%]">
               <div className="">
                 {/* <FontAwesomeIcon icon="fa-user" /> */}
                 <h1
-                  className={`text-white mx-[20px] text-[30px]`}
+                  className={`text-white text-[30px]`}
                   style={{ writingMode: "vertical-lr" }}
                 >
                   User

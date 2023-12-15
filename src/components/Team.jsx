@@ -88,7 +88,7 @@ const TeamMember = ({ color, name, job, job2, about }) => {
 
   const x = useTransform(
     scrollYProgress,
-    [0, 0.6, 1],
+    [0, 0.9, 1],
     ["1%", "-100%", "-100%"],
   );
   return (
