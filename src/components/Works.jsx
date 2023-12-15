@@ -27,10 +27,12 @@ const Works = () => {
     <>
       <section className="pham inset-0 h-auto w-screen bg-transparent">
         <h1
-          className="items-center bg-transparent z-[3] gradient-heading my-[20px] text-center snapped h-[100vh] w-[100%] main"
+          className="items-center bg-transparent z-[3] my-[20px] text-center snapped h-[100vh] w-[100%] main"
           id="project_heading"
         >
-          <a href="#projects">Our Projects</a>
+          <a href="#projects" className={`gradient-heading`}>
+            Our Projects
+          </a>
         </h1>
         <a
           className={`items-center main bg-black h-[100vh] w-screen`}
