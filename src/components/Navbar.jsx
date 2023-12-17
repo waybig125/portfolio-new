@@ -21,7 +21,7 @@ const Navbar = () => {
         <AnimatePresence>
           {toggle && (
             <div
-              className={`fixed text-center py-[60px] left-0 bottom-[70px] h-[90vh] w-[60px] bg-transparent`}
+              className={`fixed text-center py-[60px] left-0 bottom-[70px] h-[80vh] w-[60px] bg-transparent`}
               exit={{ height: 0 }}
               transition={{ ease: "linear", duration: 1, delay: 0.2 }}
             >
