@@ -159,7 +159,7 @@ export default function Descriptions({
 
               {isSecondScreen && (
                 <Suspense fallback={<Preloader />}>
-                  <div className="fixed overflow-auto text-white z-[999] bg-black h-[100vh] w-[100%]">
+                  <div className="fixed overflow-y-auto overflow-x-hidden text-white z-[999] bg-black h-[100vh] w-[100%]">
                     <div
                       className={`z-[-1]`}
                       style={{ zIndex: "-2 !important" }}
@@ -169,7 +169,7 @@ export default function Descriptions({
                     <h1 className="text-[#2dd4bf] text-4xl about-heading-mobile uppercase mt-[100px] mb-[-40px]">
                       Project Details
                     </h1>
-                    <p className="mt-[100px] text-md text-white rounded-xl paragraph-about z-[99999]">
+                    <p className="mt-[100px] w-[80%] text-md text-white rounded-xl paragraph-about z-[99999]">
                       {about}
                     </p>
                     <div

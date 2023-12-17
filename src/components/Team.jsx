@@ -3,7 +3,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import library from "@/utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PointsRing from "./Points";
+// import PointsRing from "./Points";
 const Team = () => {
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: false });
@@ -100,7 +100,7 @@ const TeamMember = ({ color, name, job, job2, about }) => {
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
-            <PointsRing colorFromUser={color} />
+            {/* <PointsRing colorFromUser={color} /> */}
             <div
               className={`w-[45%] h-[80%] team-member team-member-${color} block text-center items-center bg-black/[0.5] rounded-xl absolute left-[27.5%] top-[10%]`}
             >

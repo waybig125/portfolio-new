@@ -31,8 +31,8 @@ const PointCircle = () => {
   const ref = useRef(null);
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x -= delta / 5;
+    ref.current.rotation.y -= delta / 10;
   });
 
   //   useFrame(({ clock }) => {

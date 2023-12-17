@@ -15,7 +15,7 @@ const Navbar = () => {
         >
           <img
             src={`./assets/Logo-Dark.gif`}
-            className={`rounded-full w-[50px] h-[50px]`}
+            className={`rounded-full w-[50px] min-w-[50px] min-h-[50px] h-[50px]`}
           />
         </a>
         <AnimatePresence>
