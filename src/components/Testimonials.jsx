@@ -77,7 +77,7 @@ const Testimonial = ({ color }) => {
               <div className="">
                 {/* <FontAwesomeIcon icon="fa-user" /> */}
                 <h1
-                  className={`text-white mx-[20px] text-[30px]`}
+                  className={`text-white min-w-[50px] mx-[20px] text-[30px]`}
                   style={{ writingMode: "vertical-lr" }}
                 >
                   User
