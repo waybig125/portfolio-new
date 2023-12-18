@@ -25,9 +25,9 @@ export default function Home() {
           <Suspense fallback={"Loading..."}>
             <Team />
           </Suspense>
-          <Suspense fallback={"Loading..."}>
+          {/* <Suspense fallback={"Loading..."}>
             <Testimonials />
-          </Suspense>
+          </Suspense> */}
           <Suspense fallback={"Loading..."}>
             <Works />
           </Suspense>

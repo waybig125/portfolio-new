@@ -17,8 +17,20 @@ const Testimonials = () => {
           </motion.a>
         </h1>
         <a name="testmonials" id="testimonials">
-          <Testimonial color="white" />
-          <Testimonial color="black" />
+          <Testimonial
+            color="white"
+            testimonial1=""
+            testimonial2=""
+            user1=""
+            user2=""
+          />
+          {/* <Testimonial
+            color="black"
+            testimonial1=""
+            testimonial2=""
+            user1=""
+            user2=""
+          /> */}
         </a>
       </div>
     </div>
@@ -27,7 +39,7 @@ const Testimonials = () => {
 
 export default Testimonials;
 
-const Testimonial = ({ color }) => {
+const Testimonial = ({ color, testimonial1, testimonial2, user1, user2 }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -55,17 +67,11 @@ const Testimonial = ({ color }) => {
                   className={`text-white text-[30px] min-w-[50px]`}
                   style={{ writingMode: "vertical-lr" }}
                 >
-                  User
+                  {user1}
                 </h1>
               </div>
               <div className="text-left">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur, consequuntur. Exercitationem, deserunt rerum, magnam
-                  dolorem saepe minus nemo vel temporibus architecto, facilis
-                  accusantium aliquid veniam soluta veritatis! Eum, expedita
-                  ratione?
-                </p>
+                <p>{testimonial1}</p>
               </div>
             </div>
           </div>
@@ -80,17 +86,11 @@ const Testimonial = ({ color }) => {
                   className={`text-white min-w-[50px] mx-[20px] text-[30px]`}
                   style={{ writingMode: "vertical-lr" }}
                 >
-                  User
+                  {user2}
                 </h1>
               </div>
               <div className="text-left">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Pariatur, consequuntur. Exercitationem, deserunt rerum, magnam
-                  dolorem saepe minus nemo vel temporibus architecto, facilis
-                  accusantium aliquid veniam soluta veritatis! Eum, expedita
-                  ratione?
-                </p>
+                <p>{testimonial2}</p>
               </div>
             </div>
           </motion.div>
