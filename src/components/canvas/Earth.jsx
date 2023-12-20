@@ -62,7 +62,7 @@ const EarthCanvas = () => {
   return (
     <div
       className={`${
-        isMobile ? "right-0" : "right-[-130px]"
+        // isMobile ? "right-0" : "right-[-130px]"
       } relative w-[100%] h-[100%]`}
     >
       <Canvas
