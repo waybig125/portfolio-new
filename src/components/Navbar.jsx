@@ -11,11 +11,11 @@ const Navbar = () => {
         <a
           type="button"
           onClick={() => setToggle(!toggle)}
-          className={`cursor-pointer logo p-[2px] rounded-full w-[50px] h-[50px] hover:bg-[#2dd4bf]/[0.8] bg-black fixed left-[10px] bottom-[10px] z-[999]`}
+          className={`cursor-pointer logo flex text-center justify-center items-center p-[2px] rounded-full w-[50px] h-[50px] hover:bg-[#2dd4bf]/[0.8] bg-black fixed left-[10px] bottom-[10px] z-[999]`}
         >
           <img
             src={`./assets/Logo-Dark.gif`}
-            className={`rounded-full w-[50px] min-w-[50px] min-h-[50px] h-[50px]`}
+            className={`rounded-full w-[48px] min-w-[48px] min-h-[50px] h-[50px]`}
           />
         </a>
         <AnimatePresence>

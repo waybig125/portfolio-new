@@ -1,12 +1,13 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import Sound from "@/components/sound";
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
   const [goUp, setGoUp] = useState("");
   useEffect(() => {
     const load = () => {
-      setTimeout(() => setLoading(false), 1200);
+      setTimeout(() => setLoading(false), 2000);
       setTimeout(() => setGoUp(" anim_up", 0));
     };
     load();
@@ -14,6 +15,7 @@ export default function Preloader() {
   return (
     <>
       <AnimatePresence>
+        {!loading && <Sound />}
         {loading && (
           <motion.div
             className={`bg-transparent ${goUp} fixed top-0 left-0 w-[100vw] h-[100vh] z-[9999]`}
