@@ -5,6 +5,7 @@ import { textVariant } from "@/utils/motions";
 import useMousePosition from "@/utils/useMousePosition";
 import { useRef } from "react";
 import Typed from "react-typed";
+import EarthCanvas from "@/components/canvas/Earth";
 
 const Hero = () => {
   const { x, y } = useMousePosition();
@@ -24,8 +25,15 @@ const Hero = () => {
   return (
     <>
       <section
-        className={`relative w-full h-[40vh] mx-auto snapped pt-[100px]`}
+        className={`relative w-full h-[40vh] bg-black/[0.2] mx-auto snapped pt-[100px]`}
       >
+        <div
+          className={
+            "absolute left-0 top-0 h-[100vh] w-full z-[0] bg-transparent"
+          }
+        >
+          <EarthCanvas />
+        </div>
         <motion.div
           className="rounded-full fixed z-[1] bg-[#000] h-[40px] w-[40px]"
           id="cursor-mouse"
@@ -50,9 +58,18 @@ const Hero = () => {
               animate="show"
               transition="transition"
             >
-              We are <span className={`text-[#2dd4bf]`}>Axisio</span>
+              <span className={`bg-black/[0.2] rounded-xl p-[5px]`}>
+                We are{""}
+              </span>{" "}
+              <span
+                className={`text-[#2dd4bf] bg-black/[0.2] rounded-xl p-[5px]`}
+              >
+                Axisio
+              </span>
             </motion.h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            <p
+              className={`${styles.heroSubText} mt-2 text-white-100 bg-black/[0.2] rounded-xl p-[10px]`}
+            >
               A Team Of{" "}
               <Typed
                 strings={[
