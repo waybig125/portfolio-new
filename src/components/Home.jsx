@@ -9,10 +9,12 @@ import {
 import Team from "@/components/Team";
 import Preloader from "@/components/Preloader";
 import { Suspense } from "react";
+// import FireTrail from "@/components/FireTrail";
 
 export default function Home() {
   return (
     <>
+      {/* <FireTrail /> */}
       <div className={`relative z-0 bg-black`}>
         <Preloader />
         <div className="starsCanvas">

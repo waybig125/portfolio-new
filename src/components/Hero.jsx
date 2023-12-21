@@ -3,7 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { styles } from "../app/styles";
 import { textVariant } from "@/utils/motions";
 import useMousePosition from "@/utils/useMousePosition";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+// import Trail from "@/components/trail";
 import Typed from "react-typed";
 import EarthCanvas from "@/components/canvas/Earth";
 
@@ -24,6 +25,7 @@ const Hero = () => {
 
   return (
     <>
+      {/* <Trail /> */}
       <section
         className={`relative w-full h-[40vh] bg-black/[0.2] mx-auto snapped pt-[100px]`}
       >

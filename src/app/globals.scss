@@ -32,6 +32,20 @@
   background: linear-gradient(125deg, black, #2dd4bf);
 }
 
+.anim-fade-out {
+  animation: fadeOutAnim 1s linear forwards;
+}
+
+@keyframes fadeOutAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: none;
+  }
+}
+
 .frame {
   width: 92vw;
   aspect-ratio: 16/8;
