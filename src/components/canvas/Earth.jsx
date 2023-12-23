@@ -61,7 +61,7 @@ const EarthCanvas = () => {
 
   return (
     <div
-      className={`relative z-[2] w-[100%] h-[100%] ${
+      className={`relative z-[3] w-[100%] h-[100%] ${
         isMobile ? "" : "ml-[30vw]"
       }`}
     >
