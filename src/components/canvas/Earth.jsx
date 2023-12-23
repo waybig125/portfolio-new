@@ -60,7 +60,9 @@ const EarthCanvas = () => {
   }, []);
 
   return (
-    <div className={`relative w-[100%] h-[100%]`}>
+    <div
+      className={`relative w-[100%] h-[100%] ${isMobile ? "" : "ml-[30vw]"}`}
+    >
       <Canvas
         shadows
         frameloop="demand"

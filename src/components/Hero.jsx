@@ -60,10 +60,10 @@ const Hero = () => {
               animate="show"
               transition="transition"
             >
-              <span style={{ textShadow: `2px 2px 10px #2dd4bf` }}>
+              <span style={{ textShadow: `2px 2px 30px #2dd4bf` }}>
                 We are{""}
               </span>{" "}
-              <span style={{ textShadow: `2px 2px 10px #2dd4bf` }}>Axisio</span>
+              <span style={{ textShadow: `2px 2px 30px #2dd4bf` }}>Axisio</span>
             </motion.h1>
             <p
               className={`${styles.heroSubText} mt-2 text-white-100 bg-black/[0.2] rounded-xl p-[10px]`}
