@@ -8,7 +8,7 @@ const data = [
   {
     i: "0",
     title: "BW Pro",
-    description: `We developed the website for Business Wise Pro Documents Clearing Services L.L.C inc.`,
+    description: `We developed the website for BW Pro`,
     speed: 0.5,
     screenshot: "../../screenshots/bw.png",
     about:
