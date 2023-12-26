@@ -31,7 +31,7 @@ const Hero = () => {
       >
         <div
           className={
-            "absolute left-0 top-0 h-[100vh] w-full z-[0] bg-transparent"
+            "absolute left-0 top-0 h-[100vh] w-full z-[2] bg-transparent"
           }
         >
           <EarthCanvas />
