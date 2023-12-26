@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useEffect, useState, useRef } from "react";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 const Earth = () => {
@@ -10,7 +10,7 @@ const Earth = () => {
     <primitive
       object={earth.scene}
       scale={1.5}
-      position-x={0}
+      // position-x={0}
       position-y={1.2}
       rotation-y={0}
     />
@@ -18,18 +18,18 @@ const Earth = () => {
 };
 
 const Controls = () => {
-  // const ref = useRef(null);
-  // useFrame(() => {
-  // const angle = ref.current.getAzimuthalAngle();
-  // ref.current.autoRotate = true;
-  // ref.current.autoRotateSpeed = 30;
-  // });
+  const ref = useRef(null);
+  useFrame(() => {
+    // const angle = ref.current.getAzimuthalAngle();
+    ref.current.autoRotate = true;
+    ref.current.autoRotateSpeed = 30;
+  });
   return (
     <OrbitControls
-      // ref={ref}
+      ref={ref}
+      autoRotate
       enableZoom={false}
       enablePan={false}
-      autoRotate
       // autoRotateSpeed={30}
       maxPolarAngle={Math.PI / 2}
       minPolarAngle={Math.PI / 2}
