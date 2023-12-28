@@ -96,7 +96,11 @@ const TeamMember = ({ color, name, job, job2, about }) => {
       <div
         className="imp-vh bg-black snapped"
         ref={targetRef}
-        style={{ scrollSnapStop: "always", scrollSnapAlign: "auto" }}
+        style={{
+          scrollSnapStop: "always",
+          scrollSnapAlign: "auto",
+          height: "200vh",
+        }}
       >
         <div className="h-screen sticky flex flex-row items-center top-0 overflow-hidden">
           <div className="h-[100vh] snapped flex-none items-center w-[100%] text-center z-[1]">
