@@ -71,9 +71,9 @@ const Hero = () => {
               A Team Of{" "}
               <Typed
                 strings={[
-                  "Expert Web Developers.",
-                  "SEO Specialists.",
-                  "Digital Marketing Mavens.",
+                  "Expert Web Developers",
+                  "SEO Specialists",
+                  "Digital Marketing Mavens",
                 ]}
                 typeSpeed={150}
                 backSpeed={100}
