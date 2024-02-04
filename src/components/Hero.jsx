@@ -73,7 +73,7 @@ const Hero = () => {
                 strings={[
                   "Expert Web Developers.",
                   "SEO Specialists.",
-                  "Digital Marketng Mavens.",
+                  "Digital Marketing Mavens.",
                 ]}
                 typeSpeed={150}
                 backSpeed={100}

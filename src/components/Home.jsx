@@ -9,6 +9,7 @@ import {
 import Team from "@/components/Team";
 import Preloader from "@/components/Preloader";
 import { Suspense } from "react";
+import ParticlesJS from "./ParticlesJS";
 // import FireTrail from "@/components/FireTrail";
 
 export default function Home() {
@@ -18,7 +19,8 @@ export default function Home() {
       <div className={`relative z-0 bg-black`}>
         <Preloader />
         <div className="starsCanvas">
-          <StarsCanvas />
+          <ParticlesJS />
+          {/* <StarsCanvas /> */}
         </div>
         <div className={``}>
           <Navbar />

@@ -19,11 +19,11 @@ const Earth = () => {
 
 const Controls = () => {
   const ref = useRef(null);
-  useFrame(() => {
-    // const angle = ref.current.getAzimuthalAngle();
-    ref.current.autoRotate = true;
-    ref.current.autoRotateSpeed = 30;
-  });
+  // useFrame(() => {
+  // const angle = ref.current.getAzimuthalAngle();
+  // ref.current.autoRotate = true;
+  // ref.current.autoRotateSpeed = 30;
+  // });
   return (
     <OrbitControls
       ref={ref}
