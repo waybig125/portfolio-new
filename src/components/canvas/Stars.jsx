@@ -9,7 +9,7 @@ const Stars = (props) => {
   const { x, y } = useMousePosition();
   const ref = useRef();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(1000), { radius: 1.4 }),
+    random.inSphere(new Float32Array(500), { radius: 1.4 }),
   );
 
   useFrame((state, delta) => {
